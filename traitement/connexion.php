@@ -11,6 +11,7 @@ if($line=$q->fetch()) {
 // Si $line est faux le couple login mdp est mauvais, on retourne au formulaire
   $_SESSION['id'] = $line['id'];
   $_SESSION['login'] = $line['login'];
+  $_SESSION['avatar'] = $line['avatar'];
   header("Location: index.php");
 // sinon on crée les variables de session $_SESSION['id'] et $_SESSION['login'] et on va à la page d'accueil
 }

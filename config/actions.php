@@ -13,5 +13,6 @@ $listeDesActions = array(
     "deconnexion" => "traitement/deconnexion.php",
     "creacompte" => "traitement/creacompte.php",
     "accept" => "traitement/accept.php",
-    "demande" => "traitement/demande.php"
+    "demande" => "traitement/demande.php",
+	"ecrit" => "traitement/ecrit.php"
 );

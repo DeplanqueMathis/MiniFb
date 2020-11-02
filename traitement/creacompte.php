@@ -5,12 +5,46 @@
     isset($_POST['passwd']) &&
      isset($_POST['repasswd']) &&
       $_POST['passwd'] == $_POST['repasswd']){
-    $sql = "INSERT INTO user VALUES('', ?, PASSWORD(?) , ?, '', '')";
-    $q = $pdo->prepare($sql);
-    $q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail']));
+	  if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){	  
+		  $tailleMax = 2097152;
+		  $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
+		  if($_FILES['avatar']['size'] <= $tailleMax){
+			  $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
+			  if(in_array($extensionUpload, $extensionsValides)){
+				  $chemin = "avatars/" . $_FILES['avatar']['name'];
+				  $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'],$chemin);
+				  if($resultat){
+					  $sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, ?)";
+					  $q = $pdo->prepare($sql);
+					  $q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail'], $_FILES['avatar']['name']));
+					  header("Location: index.php");
+				  }
+				  else{
+					  echo "Problème upload";
+					  //header("Location: index.php?action=creation");
+				  }
+			  }
+			  else{
+				  echo "Problème taille";
+				  //header("Location: index.php?action=creation");
+			  }
+		  }
+		  else{
+			  echo "Problème extension";
+			  //header("Location: index.php?action=creation");
+		  }
+	  }
+	  	else{
+	  		$sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, 'default.jpg')";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail']));
+			header("Location: index.php");
+  		}
   }
+  
   else{
-    header("Location: index.php?action=creation");
+	echo("Problème isset");
+    //header("Location: index.php?action=creation");
   }
 
 ?>

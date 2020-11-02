@@ -44,11 +44,17 @@ if (isset($_SESSION['info'])) {
     <ul>
         <?php
         if (isset($_SESSION['id'])) {
-            echo "<li>Bonjour " . $_SESSION['login'] . "</li>
+            echo "<img src='avatars/" . $_SESSION['avatar'] . "'>
+			<li>Bonjour " . $_SESSION['login'] . "</li>
             <li> <a href='index.php?action=deconnexion'>Deconnexion</a></li>";
             echo "<li><a href='index.php?action=send'>Vos invitations envoyées</a></li>";
             echo "<li><a href='index.php?action=recep'>Vos invitations reçues</a></li>";
             echo "<li><a href='index.php?action=amis'>Vos amis</a></li>";
+			echo "<form action='index.php?action=ecrit' method='post'>";
+			echo "<input type='text' name='titre' placeholder='Titre de la publication'>";
+			echo "<input type='text' name='message' placeholder='Votre message'>";
+			echo "<input type='submit' value='Publier'>";
+			echo "</form>";
         } else {
             echo /*"<li><a href='index.php?action=login'>Login</a></li>*/"
             <li><a href='index.php?action=creation'>Création de compte</a></li>";
