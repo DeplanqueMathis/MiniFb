@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI";
+}
+
+body{
+    width: 1920px;
+    height: 1080px;
+    background-image: url(../images/sky.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin : 0 auto;
+    display: block;
+}
+header{
+    display: flex; 
+    align-items: center;
+    justify-content: right;
+   margin-bottom: 100px;
+}
+header img {
+     height: 100px;
+}
+nav {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+.creercompte {
+    text-align: right;
+    color: white;
+    list-style: none;
+    font-size: 2rem;
+}
+.creercompte a {
+    color: white;
+}
+
+.connexion {
+    margin-top: 50px;
+    /*position: relative;*/
+    display: flex;
+    justify-content: center;
+    height: 35px;
+    widows: 50px;
+}
+.connexion p {
+    color: white;
+}
+.champs {
+    /*position: absolute;*/
+    border: none;
+    background-color: white;
+    opacity: 0.5;
+    color: gray;
+}
+.valider {
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    border: none;
+}
+
+.deconnexion  a{
+    color: white;
+}
+.deconnexion{
+list-style: none;
+}
+
+
+footer{
+   
+}
