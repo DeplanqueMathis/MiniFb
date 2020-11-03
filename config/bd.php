@@ -2,15 +2,15 @@
 // Script login.php utilisé pour la connexion à la BD
 
 
-$host = "ipabdd.iut-lens.univ-artois.fr"; // le chemin vers le serveur (localhost dans 99% des cas)
+$host = "127.0.0.1:3307"; // le chemin vers le serveur (localhost dans 99% des cas)
 
-$db = "mathisdeplanque";
+$db = "minifb";
 // A l IUT, 3 possibilité prenomnom prenomnom1...
 
-$user = "mathis.deplanque";
+$user = "root";
 // A l iut prenom.nom
 
-$passwd = "byhM0g4O";
+$passwd = "";
 // A l iut, généré automatiquement
 
 try {
