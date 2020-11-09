@@ -46,7 +46,7 @@ if (isset($_SESSION['info'])) {
     <ul>
         <?php
         if (isset($_SESSION['id'])) {
-            echo "<img src='avatars/" . $_SESSION['avatar'] . "'>
+            echo "<img class='fond_avatar' src='images/sky-03.jpg' alt='fond'> <img class='img_avatar' src='images/avatar.png"  . $_SESSION['avatar'] . "'> 
 			<li>Bonjour " . $_SESSION['login'] . "</li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Deconnexion</a></li>";
             echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a></li>";

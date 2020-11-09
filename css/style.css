@@ -25,6 +25,7 @@ header{
    margin-bottom: 100px;
 }
 header img {
+    position: relative;
      height: 100px;
 }
 nav {
@@ -65,13 +66,15 @@ nav {
     width: 345px;
 }
 .valider {
+    font-size: 1rem;
     color: white;
     background-color: black;
     opacity: 0.5;
-    border-radius: 5px;
-    width: 70px;
-    height: 30px;
+    border-radius: 8px;
+    width: 80px;
+    height: 33px;
     border: none;
+    margin-left: 265px;
 }
 
 .deconnexion  a{
@@ -79,7 +82,46 @@ nav {
 }
 .deconnexion{
 list-style: none;
+position: absolute;
 }
+
+.img_avatar {
+    position: absolute;
+    height: 160px;
+    border-radius: 50%; 
+    left: 20px;
+    top: 20px;
+}
+
+.fond_avatar {
+    position: absolute;
+    height: 1080px;
+    width: 500px;
+    left: 0;
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
