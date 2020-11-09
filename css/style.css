@@ -33,10 +33,11 @@ nav {
     justify-content: center; 
 }
 .creercompte {
+   margin-left: 90px;
     text-align: right;
     color: white;
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .creercompte a {
     color: white;
@@ -44,21 +45,24 @@ nav {
 
 .connexion {
     margin-top: 50px;
-    /*position: relative;*/
     display: flex;
     justify-content: center;
-    height: 35px;
-    widows: 50px;
+    
 }
+
 .connexion p {
+    font-size: 1rem;
+    padding: 15px 0px;
     color: white;
 }
 .champs {
-    /*position: absolute;*/
+    margin-bottom: 10px;
     border: none;
     background-color: white;
     opacity: 0.5;
     color: gray;
+    height: 35px;
+    width: 345px;
 }
 .valider {
     color: white;
