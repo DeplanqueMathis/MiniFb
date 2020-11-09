@@ -17,7 +17,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma super application</title>
+    <title>Le Secteur</title>
 
 
 
@@ -46,17 +46,22 @@ if (isset($_SESSION['info'])) {
     <ul>
         <?php
         if (isset($_SESSION['id'])) {
-            echo "<img class='fond_avatar' src='images/sky-03.jpg' alt='fond'> <img class='img_avatar' src='images/avatar.png"  . $_SESSION['avatar'] . "'> 
-			<li>Bonjour " . $_SESSION['login'] . "</li>
+            
+            echo "<img class='fond_avatar' src='images/sky-03.jpg' alt='fond'> <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "</p> 
+            <img class='img_avatar' src='images/avatar.png"  . $_SESSION['avatar'] . "'> 
+			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Deconnexion</a></li>";
-            echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a></li>";
-            echo "<li><a href='index.php?action=recep'>Vos invitations reçues</a></li>";
-            echo "<li><a href='index.php?action=amis'>Vos amis</a></li>";
-			echo "<form action='index.php?action=ecrit' method='post'>";
-			echo "<input type='text' name='titre' placeholder='Titre de la publication'>";
-			echo "<input type='text' name='message' placeholder='Votre message'>";
-			echo "<input type='submit' value='Publier'>";
-			echo "</form>";
+            echo "<li class='vos_amis' ><a href='index.php?action=amis'>Tous vos amis sont ici </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
+            echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> </li>";
+            echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li>";
+			echo "<div class='mes_posts'>
+            <form  action='index.php?action=ecrit' method='post'>
+            <p> Vos Posts : </p>
+            <input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
+			<input class='champs_posts' type='text' name='message' placeholder=' Votre message'><br/>
+			<input class='valider_posts' type='submit' value='Publier'>
+			</form></div>";
+            
         } else {
             echo /*"<li><a href='index.php?action=login'>Login</a></li>*/"
             <li class='creercompte'><p>Pas encore de compte ?</p><a href='index.php?action=creation'>Rejoins-nous !</a></li>";
