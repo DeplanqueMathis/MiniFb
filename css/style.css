@@ -34,7 +34,7 @@ nav {
     justify-content: center; 
 }
 .creercompte {
-   margin-left: 90px;
+    margin-left: 90px;
     text-align: right;
     color: white;
     list-style: none;
@@ -42,6 +42,56 @@ nav {
 }
 .creercompte a {
     color: white;
+}
+
+.creation_compte_seco{   
+    text-align: right;
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-left:160px;
+}
+
+.creation_compte_seco a {
+    color: white;  
+}
+.creation_compte{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; 
+}
+.creation_compte p {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.creation_compte input {
+    margin-bottom: 15px;
+}
+.champs_creation_compte{
+    height: 35px;
+    width: 345px;
+    border: none;
+    background-color: white;
+    opacity: 0.5;
+    color: gray;
+    margin-bottom: 15px;
+}
+.avatar_creation_compte{
+    height: 35px;
+    width: 345px;
+    color: white;
+}
+.valider_creation_compte {
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 8px;
+    width: 80px;
+    height: 33px;
+    border: none;
+    margin-left: 265px;
 }
 
 .connexion {

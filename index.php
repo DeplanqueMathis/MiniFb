@@ -58,14 +58,14 @@ if (isset($_SESSION['info'])) {
             <form  action='index.php?action=ecrit' method='post'>
             <p> Vos Posts : </p>
             <input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
-			<input class='champs_posts' type='text' name='message' placeholder=' Votre message'><br/>
+			<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
 			<input class='valider_posts' type='submit' value='Publier'>
 			</form></div>";
             
-        } else {
-            echo /*"<li><a href='index.php?action=login'>Login</a></li>*/"
-            <li class='creercompte'><p>Pas encore de compte ?</p><a href='index.php?action=creation'>Rejoins-nous !</a></li>";
-        }
+        }/* else {
+            echo /*"<li><a href='index.php?action=login'>Login</a></li>"
+            <li class='creercompte'><p>Pas encore de compte ?</p><a href='index.php?action=creation'>Rejoins-nous !</a></li>";*/
+       /* }*/
         ?>
 
     </ul>
