@@ -56,9 +56,16 @@ nav {
     color: white;  
 }
 .creation_compte{
-    margin-top: 50px;
+    margin-top: 15px;
     display: flex;
     justify-content: center; 
+    background-color: rgba(0,0,0,0.5);
+    padding : 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    height: 400px;
+    width: 500px;
+    margin-left: 520px;
 }
 .creation_compte p {
     color: white;
@@ -82,6 +89,10 @@ nav {
     width: 345px;
     color: white;
 }
+.creation_compte input[type=file]{
+    color: white;
+   /*modif direct dans le htmlpour le "parcourir"*/
+}
 .valider_creation_compte {
     font-size: 1rem;
     color: white;
@@ -97,7 +108,14 @@ nav {
 .connexion {
     margin-top: 50px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;  
+    background-color: rgba(0,0,0,0.5);
+    padding : 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    height: 280px;
+    width: 500px;
+    margin-left: 520px;
 }
 
 .connexion p {
@@ -249,7 +267,18 @@ nav {
     border: none;
 }
 
-
+.erreur_404{
+    color: white;
+    font-size: 5rem;
+}
+.page_erreur {
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+.page_erreur img{
+    height: 400px;
+}
 
 
 

@@ -9,7 +9,9 @@
     <div class="creation_compte">
 <form action='index.php?action=creacompte' method='POST' enctype="multipart/form-data">
     <p>Choisssez votre avatar</p>
-<input class="avatar_creation_compte" type="file" id="avatar" name="avatar"><br/>
+<input class="avatar_creation_compte" type="file" id="avatar" name="avatar"
+       style="border: none;
+    opacity: 0.5;"><br/>
 <input class="champs_creation_compte" type="text" name="login" placeholder="  Identifiant"><br/>
 <input class="champs_creation_compte" type="email" name="mail" placeholder="  Mail"><br/>
 <input class="champs_creation_compte" type="password" name="passwd" placeholder="  Mot de passe"><br/>
