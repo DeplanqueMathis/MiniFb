@@ -62,7 +62,7 @@
     $sql = "SELECT * FROM ecrit WHERE idAmi=? order by dateEcrit DESC";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
-    if($line=$q->fetch()) {
+    while($line=$q->fetch()) {
 		echo "<div style='padding : 5rem; border : 1px solid black; width : 10rem; position:absolute;'>";
 		echo $line['titre'] . "<br/>";
 		echo $line['contenu'] . "<br/>";

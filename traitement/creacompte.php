@@ -11,12 +11,14 @@
 		  if($_FILES['avatar']['size'] <= $tailleMax){
 			  $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
 			  if(in_array($extensionUpload, $extensionsValides)){
-				  $chemin = "images/avatars/" . $_FILES['avatar']['name'];
+				  $today = date("m_d_y"); 
+				  $nomfichier = "avatar_" . $today . "_" . rand(0,10000) . "." . $extensionUpload;
+				  $chemin = "images/avatars/" . $nomfichier;
 				  $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'],$chemin);
 				  if($resultat){
 					  $sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, ?)";
 					  $q = $pdo->prepare($sql);
-					  $q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail'], $_FILES['avatar']['name']));
+					  $q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail'], $nomfichier));
 					  header("Location: index.php");
 				  }
 				  else{

@@ -3,7 +3,7 @@ $sql = "SELECT user.* FROM user WHERE id IN(SELECT idUtilisateur1 FROM lien WHER
 
 $q = $pdo->prepare($sql);
 $q->execute(array($_SESSION['id']));
-if($line=$q->fetch()) {
+while($line=$q->fetch()) {
 	echo "<div style='border : 1px solid black; width : 10rem'>";
 	echo "<a href='index.php?id=" . $line['id'] . "'>" . $line['login'] . "</a><br/>";
 	echo "<form action='index.php?action=accept' method='POST'>";
@@ -13,7 +13,7 @@ if($line=$q->fetch()) {
 	echo "En attente d'une réponse";
 	echo "</div>";
 }
-else{
+if($line!=$q->fetch()){
   echo "Vous n'avez aucune demande en attente";
 }
 ?>
