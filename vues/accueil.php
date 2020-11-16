@@ -63,17 +63,20 @@
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     if($line=$q->fetch()) {
-		echo "<div style='padding : 5rem; border : 1px solid black; width : 10rem'>";
+		echo "<div style='padding : 5rem; border : 1px solid black; width : 10rem; position:absolute;'>";
 		echo $line['titre'] . "<br/>";
 		echo $line['contenu'] . "<br/>";
 		echo $line['dateEcrit'] . "<br/>";
+		if(isset($line['image'])){
+			echo "<img src='images/img_publi/" . $line['image'] . "'>";
+		}/*
 		echo "Par :";
 		$sql = "SELECT * FROM user WHERE id=?";
     	$q = $pdo->prepare($sql);
     	$q->execute(array($id));
     	if($line=$q->fetch()) {
 			echo "<a href='index.php?id=" . $id . "'>" . $line['login'] . "</a>";
-		}
+		}*/
 		echo "</div>";
     }
     // le paramètre  est le $id

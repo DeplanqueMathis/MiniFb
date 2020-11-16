@@ -11,7 +11,7 @@
 		  if($_FILES['avatar']['size'] <= $tailleMax){
 			  $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
 			  if(in_array($extensionUpload, $extensionsValides)){
-				  $chemin = "avatars/" . $_FILES['avatar']['name'];
+				  $chemin = "images/avatars/" . $_FILES['avatar']['name'];
 				  $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'],$chemin);
 				  if($resultat){
 					  $sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, ?)";
@@ -35,7 +35,7 @@
 		  }
 	  }
 	  	else{
-	  		$sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, 'default.jpg')";
+	  		$sql = "INSERT INTO user (login,mdp,mail,avatar) VALUES( ?, PASSWORD(?) , ?, 'avatar.png')";
 			$q = $pdo->prepare($sql);
 			$q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail']));
 			header("Location: index.php");

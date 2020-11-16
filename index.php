@@ -42,17 +42,18 @@ if (isset($_SESSION['info'])) {
         if (isset($_SESSION['id'])) {
             
             echo "<img class='fond_avatar' src='images/sky-03.jpg' alt='fond'> <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "</p> 
-            <img class='img_avatar' src='images/avatar.png"  . $_SESSION['avatar'] . "'> 
+            <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'> 
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li>";
             echo "<li class='vos_amis' ><a href='index.php?action=amis'>Tous vos amis sont ici </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
             echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> </li>";
             echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li>";
 			echo "<div class='mes_posts'>
-            <form  action='index.php?action=ecrit' method='post'>
+            <form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>
             <p> Vos Posts : </p>
             <input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
 			<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
+			<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
 			<input class='valider_posts' type='submit' value='Publier'>
 			</form></div>";
             
