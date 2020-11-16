@@ -152,7 +152,9 @@ nav {
     bottom: 30px;
     left: 30px;
 }
-
+.deconnexion a:hover {
+    color: #828282;
+}
 .img_avatar {
     position: absolute;
     height: 200px;
