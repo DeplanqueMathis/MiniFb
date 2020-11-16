@@ -22,6 +22,7 @@ header{
    margin-bottom: 100px;
 }
 header img {
+    position: relative;
      height: 100px;
 }
 nav {
@@ -30,49 +31,277 @@ nav {
     justify-content: center; 
 }
 .creercompte {
+    margin-left: 90px;
     text-align: right;
     color: white;
     list-style: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 .creercompte a {
     color: white;
 }
 
-.connexion {
-    margin-top: 50px;
-    /*position: relative;*/
-    display: flex;
-    justify-content: center;
-    height: 35px;
-    widows: 50px;
-}
-.connexion p {
+.creation_compte_seco{   
+    text-align: right;
     color: white;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-left:160px;
 }
-.champs {
-    /*position: absolute;*/
+
+.creation_compte_seco a {
+    color: white;  
+}
+.creation_compte{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; 
+    background-color: rgba(0,0,0,0.5);
+    padding : 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    height: 400px;
+    width: 500px;
+    margin-left: 520px;
+}
+.creation_compte p {
+    color: white;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.creation_compte input {
+    margin-bottom: 15px;
+}
+.champs_creation_compte{
+    height: 35px;
+    width: 345px;
     border: none;
     background-color: white;
     opacity: 0.5;
     color: gray;
+    margin-bottom: 15px;
 }
-.valider {
+.avatar_creation_compte{
+    height: 35px;
+    width: 345px;
+    color: white;
+}
+.creation_compte input[type=file]{
+    color: white;
+   /*modif direct dans le htmlpour le "parcourir"*/
+}
+.valider_creation_compte {
+    font-size: 1rem;
     color: white;
     background-color: black;
     opacity: 0.5;
-    border-radius: 5px;
-    width: 70px;
-    height: 30px;
+    border-radius: 8px;
+    width: 80px;
+    height: 33px;
     border: none;
+    margin-left: 265px;
+}
+
+.connexion {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;  
+    background-color: rgba(0,0,0,0.5);
+    padding : 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+    height: 280px;
+    width: 500px;
+    margin-left: 520px;
+}
+
+.connexion p {
+    font-size: 1rem;
+    padding: 15px 0px;
+    color: white;
+}
+.champs {
+    margin-bottom: 10px;
+    border: none;
+    background-color: white;
+    opacity: 0.5;
+    color: gray;
+    height: 35px;
+    width: 345px;
+}
+.valider {
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 8px;
+    width: 80px;
+    height: 33px;
+    border: none;
+    margin-left: 265px;
 }
 
 .deconnexion  a{
     color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
 }
 .deconnexion{
-list-style: none;
+    list-style: none;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
 }
+
+.img_avatar {
+    position: absolute;
+    height: 200px;
+    border-radius: 50%; 
+    left: 150px;
+    top: 20px;
+    background-color: white;
+}
+.crayon_avatar{
+    position: absolute;
+    height: 50px;
+    top: 150px;
+    left: 360px;
+}
+.fond_avatar {
+    position: absolute;
+    height: 760px;
+    width: 500px;
+    left: 0;
+    top: 0;
+}
+.profil_avatar{
+    height: 50px;
+    position: absolute;
+    top: 230px;
+    left: 180px;
+}
+.profil_nom{
+    position: absolute;
+    top: 250px;
+    left: 230px;
+    color: white;
+}
+.bonjour{
+    list-style: none;
+    color: white;
+    position: absolute;
+    top:30px;
+    left: 820px;
+    font-size: 1.5rem;
+}
+.invit {
+    position: absolute;
+    list-style: none;
+    top : 200px;
+    left: 1100px;
+}
+
+.invit a {
+    text-decoration: none;
+    color: white;
+}
+.invit a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
+.invit_recues {
+    position: absolute;
+    list-style: none;
+    top : 400px;
+    left: 1100px;
+}
+
+.invit_recues a {
+    text-decoration: none;
+    color: white;
+}
+.invit_recues a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
+
+.vos_amis {
+    list-style: none;
+}
+
+.vos_amis a {
+    text-decoration: none;
+    color: white;
+}
+.vos_amis a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
+
+.amis_fleche {
+    position: absolute;
+    height: 70px;
+    top: 190px;
+    margin-left: -40px;
+    /*transform: rotate(45deg);*/
+    transition: all 0.7s;
+}
+.amis_fleche:hover,
+.amis_fleche:focus {
+    transform: rotate(360deg);
+}
+.mes_posts p{
+    color: white;
+    margin-bottom: 15px;
+}
+.mes_posts {
+    position: absolute;
+    top : 400px;
+    display: flex;
+    justify-content: center; 
+}
+.champs_posts {
+    margin-bottom: 15px;
+    border: none;
+    background-color: royalblue;
+    opacity: 0.5;
+    color: white;
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+}
+.valider_posts {
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    border-radius: 20px;
+    width: 80px;
+    height: 33px;
+    border: none;
+}
+
+.erreur_404{
+    color: white;
+    font-size: 5rem;
+}
+.page_erreur {
+    list-style: none;
+    color: white;
+    text-align: center;
+}
+.page_erreur img{
+    height: 400px;
+}
+
+
+
+
+
+
+
+
+
 
 
 footer{
