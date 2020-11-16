@@ -2,7 +2,7 @@
 
 	$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , '' , ? , ?)";
 	$q = $pdo->prepare($sql);
-	if(!isset($_GET["id"]) || $_GET["id"]==$_SESSION["id"]){
+	if(isset($_GET["id"]) || $_GET["id"]==$_SESSION["id"]){
 		$id = $_GET['id'];
 	}
 	else{

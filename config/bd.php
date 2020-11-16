@@ -2,7 +2,7 @@
 // Script login.php utilisé pour la connexion à la BD
 
 
-$host = "127.0.0.1:3307"; // le chemin vers le serveur (localhost dans 99% des cas)
+$host = "localhost"; // le chemin vers le serveur (localhost dans 99% des cas)
 
 $db = "minifb";
 // A l IUT, 3 possibilité prenomnom prenomnom1...
@@ -10,7 +10,7 @@ $db = "minifb";
 $user = "root";
 // A l iut prenom.nom
 
-$passwd = "";
+$passwd = "GalaxY_108-170";
 // A l iut, généré automatiquement
 
 try {
