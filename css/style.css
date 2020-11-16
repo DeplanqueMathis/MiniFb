@@ -4,11 +4,8 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Segoe UI";
-}
-
 body{
+	font-family: "Segoe UI";
     width: 1920px;
     height: 1080px;
     background-image: url(../images/sky.jpg);
