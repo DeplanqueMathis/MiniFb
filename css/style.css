@@ -30,6 +30,7 @@ nav {
     align-items: center;
     justify-content: center; 
 }
+
 .creercompte {
     margin-left: 90px;
     text-align: right;
@@ -152,7 +153,9 @@ nav {
     bottom: 30px;
     left: 30px;
 }
-
+.deconnexion a:hover {
+    color: #828282;
+}
 .img_avatar {
     position: absolute;
     height: 200px;
@@ -167,6 +170,7 @@ nav {
     top: 150px;
     left: 360px;
 }
+
 .fond_avatar {
     position: absolute;
     height: 760px;
@@ -185,6 +189,29 @@ nav {
     top: 250px;
     left: 230px;
     color: white;
+}
+.profil_nom:hover {
+    color: #f04a3e;
+}
+.profil_nom span { 
+    position: absolute;
+    margin-top:-10px;
+    margin-left:25px;
+    color:#f04a3e;
+    background:#2d4a50;
+    border: none;
+    padding:10px;
+    width: 100px;
+    border-radius:3px;
+    box-shadow:5px 5px 5px rgba(0,0,0,.5);
+    transform:scale(0) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+}
+.profil_nom:hover  span,
+.profil_nom:focus  span {
+    transform:scale(1) rotate(0);   
+     opacity:1;
 }
 .bonjour{
     list-style: none;
@@ -300,7 +327,34 @@ nav {
 
 
 
-
+/*responsive pour galaxy S9 et android 7.0*/
+@media screen and (max-width : 360px) {
+    body {
+    width: 360px;
+    height: 740px;
+    }
+    .creercompte {
+        font-size: 1rem;
+    }
+    nav {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+    .connexion {
+        height: 150px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    .champs {
+        width: 200px;
+        height: 20px;
+        margin-top: -50px;
+        margin-left: 50px;
+    }
+}
 
 
 
