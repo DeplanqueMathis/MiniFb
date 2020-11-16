@@ -50,7 +50,7 @@ if (isset($_SESSION['info'])) {
             echo "<img class='fond_avatar' src='images/sky-03.jpg' alt='fond'> <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "</p> 
             <img class='img_avatar' src='images/avatar.png"  . $_SESSION['avatar'] . "'> 
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>
-            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Deconnexion</a></li>";
+            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li>";
             echo "<li class='vos_amis' ><a href='index.php?action=amis'>Tous vos amis sont ici </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
             echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> </li>";
             echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li>";

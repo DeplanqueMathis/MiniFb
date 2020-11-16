@@ -208,7 +208,10 @@ nav {
     text-decoration: none;
     color: white;
 }
-
+.invit a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
 .invit_recues {
     position: absolute;
     list-style: none;
@@ -220,6 +223,10 @@ nav {
     text-decoration: none;
     color: white;
 }
+.invit_recues a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
 
 .vos_amis {
     list-style: none;
@@ -229,12 +236,22 @@ nav {
     text-decoration: none;
     color: white;
 }
+.vos_amis a:hover{
+    color: lightskyblue;
+    opacity: 0.5;
+}
 
 .amis_fleche {
     position: absolute;
     height: 70px;
     top: 190px;
     margin-left: -40px;
+    /*transform: rotate(45deg);*/
+    transition: all 0.7s;
+}
+.amis_fleche:hover,
+.amis_fleche:focus {
+    transform: rotate(360deg);
 }
 .mes_posts p{
     color: white;
