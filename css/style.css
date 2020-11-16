@@ -170,6 +170,7 @@ nav {
     top: 150px;
     left: 360px;
 }
+
 .fond_avatar {
     position: absolute;
     height: 760px;
@@ -188,6 +189,29 @@ nav {
     top: 250px;
     left: 230px;
     color: white;
+}
+.profil_nom:hover {
+    color: #f04a3e;
+}
+.profil_nom span { 
+    position: absolute;
+    margin-top:-10px;
+    margin-left:25px;
+    color:#f04a3e;
+    background:#2d4a50;
+    border: none;
+    padding:10px;
+    width: 100px;
+    border-radius:3px;
+    box-shadow:5px 5px 5px rgba(0,0,0,.5);
+    transform:scale(0) rotate(-12deg);
+    transition:all .25s;
+    opacity:0;
+}
+.profil_nom:hover  span,
+.profil_nom:focus  span {
+    transform:scale(1) rotate(0);   
+     opacity:1;
 }
 .bonjour{
     list-style: none;
