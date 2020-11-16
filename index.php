@@ -19,12 +19,6 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Secteur</title>
 
-
-
-
-    <!-- Ma feuille de style à moi -->
-    <link href="./css/style.css" rel="stylesheet">
-
     <script src="js/jquery-3.2.1.min.js"></script>
 </head>
 
