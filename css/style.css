@@ -30,6 +30,7 @@ nav {
     align-items: center;
     justify-content: center; 
 }
+
 .creercompte {
     margin-left: 90px;
     text-align: right;
@@ -326,7 +327,34 @@ nav {
 
 
 
-
+/*responsive pour galaxy S9 et android 7.0*/
+@media screen and (max-width : 360px) {
+    body {
+    width: 360px;
+    height: 740px;
+    }
+    .creercompte {
+        font-size: 1rem;
+    }
+    nav {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+    .connexion {
+        height: 150px;
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    .champs {
+        width: 200px;
+        height: 20px;
+        margin-top: -50px;
+        margin-left: 50px;
+    }
+}
 
 
 
