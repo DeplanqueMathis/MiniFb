@@ -47,7 +47,7 @@
         if($line=$q->fetch()) {
         }
         else{
-            echo "<form action='index.php?action=demande' method='POST'>";
+            echo "<form  action='index.php?action=demande' method='POST'>";
             echo "<input type='number' name='id' value='" . $_GET['id'] . "' style='display : none;'>";
             echo "<input type='submit' value='Demander en ami'>";
             echo "</form>";
@@ -63,13 +63,13 @@
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
     while($line=$q->fetch()) {
-		echo "<div style='padding : 5rem; border : 1px solid black; width : 10rem; position:absolute;'>";
-		echo $line['titre'] . "<br/>";
-		echo $line['contenu'] . "<br/>";
-		echo $line['dateEcrit'] . "<br/>";
+		echo "<nav><div class='post_publier' > <b>";
+		echo $line['titre'] . "</b><br/>";
+		echo $line['contenu'] . "<br/><p>";
+		echo $line['dateEcrit'] . "</p>";
 		if(isset($line['image'])){
-			echo "<img src='images/img_publi/" . $line['image'] . "'>";
-		}/*
+			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
+		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé/*
 		echo "Par :";
 		$sql = "SELECT * FROM user WHERE id=?";
     	$q = $pdo->prepare($sql);
@@ -77,7 +77,7 @@
     	if($line=$q->fetch()) {
 			echo "<a href='index.php?id=" . $id . "'>" . $line['login'] . "</a>";
 		}*/
-		echo "</div>";
+		echo "</div> </nav>";
     }
     // le paramètre  est le $id
    }

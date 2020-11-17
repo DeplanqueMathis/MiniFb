@@ -86,6 +86,7 @@ nav {
     height: 35px;
     width: 345px;
     color: white;
+    border-radius: 20px;
 }
 .creation_compte input[type=file]{
     color: white;
@@ -167,7 +168,7 @@ nav {
 .crayon_avatar{
     position: absolute;
     height: 50px;
-    top: 150px;
+    top: 200px;
     left: 360px;
 }
 
@@ -239,7 +240,7 @@ nav {
 .invit_recues {
     position: absolute;
     list-style: none;
-    top : 400px;
+    top : 350px;
     left: 1100px;
 }
 
@@ -283,7 +284,7 @@ nav {
 }
 .mes_posts {
     position: absolute;
-    top : 400px;
+    top : 350px;
     display: flex;
     justify-content: center; 
 }
@@ -307,6 +308,31 @@ nav {
     height: 33px;
     border: none;
 }
+
+.post_publier {
+    background-color: white;
+    width : 300px; 
+    position: absolute;
+    top: 550px; 
+    opacity: 0.5;
+    border-radius: 5px;
+    padding: 5px;
+}
+.post_publier img {
+    height: 40px;
+}
+.post_publier p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    font-size: 0.7rem;
+}
+.img_publi {
+    height: 35px;
+    width: 345px;
+    color: white;
+    border-radius: 20px;
+}
+
 
 .erreur_404{
     color: white;
