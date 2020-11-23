@@ -178,12 +178,14 @@ nav {
 }
 
 .fond_avatar {
+    background-image: url(../images/sky-03.jpg);
     position: absolute;
+    background-size: cover;
     height: 760px;
     width: 500px;
     left: 0;
     top: 0;
-    background-attachment: fixed;
+    display: block;
 }
 
 .profil_avatar{
@@ -233,8 +235,7 @@ nav {
 
 
 #mon_mur {
-    text-align: right;
-    /*margin-left: 400px;*/
+    margin-left: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 150px;
@@ -286,8 +287,8 @@ nav {
 .amis_fleche {
     position: absolute;
     height: 70px;
-    top: 190px;
-    margin-left: -40px;
+    /*top: 190px;
+    margin-left: -40px;*/
     /*transform: rotate(45deg);*/
     transition: all 0.7s;
 }
@@ -301,7 +302,6 @@ nav {
 }
 .mes_posts {
     grid-area: m3;
-    
 }
 .champs_posts {
     margin-bottom: 15px;
@@ -322,13 +322,13 @@ nav {
     width: 80px;
     height: 33px;
     border: none;
+    margin-left: 220px;
 }
 
-.post_publier {
+.post_publier { 
+    margin: 20px;
     background-color: white;
     width : 300px; 
-    position: absolute;
-    top: 550px; 
     opacity: 0.5;
     border-radius: 5px;
     padding: 5px;
