@@ -3,7 +3,7 @@
  ?>
     <nav>
 <li class='creercompte'><p>Pas encore de compte ?</p><a href='index.php?action=creation'>Rejoins-nous !</a></li>
-    </nav>
+</nav>
  <div class="connexion">
 <form  action='index.php?action=connexion' method='POST'>
      <p>Se connecter</p>
