@@ -316,7 +316,6 @@ nav {
 .post_publier {
     background-color: white;
     width : 300px; 
-    position: absolute;
     top: 550px; 
     opacity: 0.5;
     border-radius: 5px;
