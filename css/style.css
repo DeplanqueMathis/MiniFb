@@ -158,6 +158,7 @@ nav {
     position: absolute;
     bottom: 30px;
     left: 30px;
+    
 }
 .deconnexion a:hover {
     color: #828282;
@@ -183,9 +184,11 @@ nav {
     background-size: cover;
     height: 760px;
     width: 500px;
+    margin: 0;
     left: 0;
     top: 0;
-    display: block;
+    position: fixed;
+    background-attachment: scroll;
 }
 
 .profil_avatar{
@@ -329,10 +332,6 @@ nav {
     margin: 20px;
     background-color: white;
     width : 300px; 
-<<<<<<< HEAD
-=======
-    top: 550px; 
->>>>>>> ccae576dfbe5254f4eaa7ab8b2cd240e125a49f4
     opacity: 0.5;
     border-radius: 5px;
     padding: 5px;
