@@ -329,6 +329,10 @@ nav {
     margin: 20px;
     background-color: white;
     width : 300px; 
+<<<<<<< HEAD
+=======
+    top: 550px; 
+>>>>>>> ccae576dfbe5254f4eaa7ab8b2cd240e125a49f4
     opacity: 0.5;
     border-radius: 5px;
     padding: 5px;

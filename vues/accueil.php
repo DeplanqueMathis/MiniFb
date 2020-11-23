@@ -62,12 +62,13 @@
     $sql = "SELECT * FROM ecrit WHERE idAmi=? order by dateEcrit DESC";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
+	echo "<div class='all-post'>";
     while($line=$q->fetch()) {
 		echo "<nav><div class='post_publier' > <b>";
 		echo $line['titre'] . "</b><br/>";
 		echo $line['contenu'] . "<br/><p>";
 		echo $line['dateEcrit'] . "</p>";
-		if(isset($line['image'])){
+		if(!empty($line['image'])){
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
 		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé/*
 		echo "Par :";
@@ -79,6 +80,7 @@
 		}*/
 		echo "</div> </nav>";
     }
+	echo "</div>";
     // le paramètre  est le $id
    }
 
