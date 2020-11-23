@@ -14,7 +14,7 @@ if(isset($_POST['titre']) &&
 				  if($resultat){
 					  	$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , ? , ? , ?)";
 						$q = $pdo->prepare($sql);
-						if(isset($_GET["id"]) || $_GET["id"]==$_SESSION["id"]){
+						if(isset($_GET["id"])){
 							$id = $_GET['id'];
 						}
 						else{
@@ -45,7 +45,7 @@ if(isset($_POST['titre']) &&
 		  }
 	  }
 	  	else{
-	  		$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , 'test' , ? , ?)";
+	  		$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , '' , ? , ?)";
 			$q = $pdo->prepare($sql);
 			if(isset($_GET["id"]) || $_GET["id"]==$_SESSION["id"]){
 				$id = $_GET['id'];

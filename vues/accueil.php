@@ -59,6 +59,12 @@
    } else {
    // A completer
    // Requête de sélection des éléments dun mur
+	$sql = "SELECT * FROM user WHERE id=?";
+    $q = $pdo->prepare($sql);
+    $q->execute(array($id));
+    if($line=$q->fetch()) {
+		$login = $line['login'];
+	}
     $sql = "SELECT * FROM ecrit WHERE idAmi=? order by dateEcrit DESC";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
@@ -70,14 +76,8 @@
 		echo $line['dateEcrit'] . "</p>";
 		if(!empty($line['image'])){
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
-		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé/*
-		echo "Par :";
-		$sql = "SELECT * FROM user WHERE id=?";
-    	$q = $pdo->prepare($sql);
-    	$q->execute(array($id));
-    	if($line=$q->fetch()) {
-			echo "<a href='index.php?id=" . $id . "'>" . $line['login'] . "</a>";
-		}*/
+		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé*/
+		echo "Par : <a href='index.php?id=" . $id . "'>$login</a>";
 		echo "</div> </nav>";
     }
 	echo "</div>";
