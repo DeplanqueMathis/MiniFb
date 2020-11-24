@@ -299,6 +299,13 @@ nav {
 .amis_fleche:focus {
     transform: rotate(360deg);
 }
+
+
+.demander_ami {
+background-color: black;
+}
+
+
 .mes_posts p{
     color: white;
     margin-bottom: 15px;
