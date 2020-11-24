@@ -36,7 +36,7 @@
         $q->execute(array($_SESSION['id']));
         if($line=$q->fetch()) {
           echo "<nav><form action='index.php?action=accept' method='POST'>";
-          echo "<input type='number' name='id' value='" . $_GET['id'] . "' style='display : none;'>";
+          echo "<input  type='number' name='id' value='" . $_GET['id'] . "' style='display : none;'>";
           echo "<input type='submit' value='Accepter'>";
           echo "</form></nav>";
         }
@@ -49,7 +49,7 @@
         else{
             echo "<nav><form  action='index.php?action=demande' method='POST'>";
             echo "<input type='number' name='id' value='" . $_GET['id'] . "' style='display : none;'>";
-            echo "<input type='submit' value='Demander en ami'>";
+            echo "<input class='demander_ami' type='submit' value='Demander en ami'>";
             echo "</form></nav>";
         }
        // A completer. Il faut récupérer une ligne, si il y en a pas ca veut dire que lon est pas ami avec cette personne

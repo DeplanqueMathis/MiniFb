@@ -31,7 +31,7 @@ nav {
     align-items: center;
     justify-content: center; 
 }
-
+/*PAGE DE CRATION DU COMPTE*/
 .creercompte {
     margin-left: 90px;
     text-align: right;
@@ -105,6 +105,7 @@ nav {
     margin-left: 265px;
 }
 
+/*PAGE DE CONNEXION A SON COMPTE*/
 .connexion {
     margin-top: 50px;
     display: flex;
@@ -147,7 +148,7 @@ nav {
 
 
 
-/*profil*/ 
+/*PAGE DU MUR DE LA PERSONNE CONNECTE*/ 
 .deconnexion  a{
     color: white;
     font-size: 1.2rem;
@@ -189,6 +190,9 @@ nav {
     top: 0;
     position: fixed;
     background-attachment: scroll;
+}
+.fond_avatar_responsive {
+    display: none;
 }
 
 .profil_avatar{
@@ -235,7 +239,7 @@ nav {
     font-size: 1.5rem;
 }
 
-
+/*ELEMENTS COMPOSANT LE MUR*/
 
 #mon_mur {
     margin-left: 550px;
@@ -299,6 +303,24 @@ nav {
 .amis_fleche:focus {
     transform: rotate(360deg);
 }
+
+/*sur les amis*/
+.demander_ami {
+    background-color: black;
+    border: none;
+    opacity: 0.5;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+.demander_ami:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+}
+
+/*POSSIBILITE DE POSTER SUR SON MUR*/
 .mes_posts p{
     color: white;
     margin-bottom: 15px;
@@ -328,6 +350,7 @@ nav {
     margin-left: 220px;
 }
 
+/*POSTS PUBLIER*/
 .post_publier { 
     margin: 20px;
     background-color: white;
@@ -351,7 +374,7 @@ nav {
     border-radius: 20px;
 }
 
-
+/*PAGE ERREUR 404*/
 .erreur_404{
     color: white;
     font-size: 5rem;
@@ -376,13 +399,19 @@ nav {
     body {
     width: 360px;
     height: 740px;
-        background-size: cover;
+    background-size: cover;
+    background-attachment: scroll;
+    height: 100%;
+    width: 100%;
+    margin : 0 auto;
+    display: block;
     }
     header img {
     position: relative;
      height: 50px;
     }
     .creercompte {
+        margin-top: 100px;
         font-size: 1rem;
     }
     nav {
@@ -406,29 +435,73 @@ nav {
         padding: 00px 0px 10px 20px;
     }
     .champs {
-        width: 200px;
-        height: 20px;
+        width: 250px;
+        height: 25px;
         margin-left: 20px;
     }
     .valider{
         margin-left: 200px;
     }
-    .fond_avatar_responsive{
-        position: absolute;
-        background-color: aqua;
-        height: 100px;
-        width: 360px;
-        top: 0;
-        left: 0;
+    
+    /*page creation de compte*/
+
+    .creation_compte_seco{   
+    margin-top: 20px;
+    font-size: 1rem;
+    margin-left:160px;
     }
-    .deconnexion  a{
+
+    .creation_compte_seco a {
+    color: white;  
+    }
+    .creation_compte{
+   
+    height: 300px;
+    width: 300px;
+    margin-left: 30px;
+    }
+    .creation_compte form {
+        margin-left: 90px;
+    }
+    .creation_compte p {
     color: white;
-    font-size: 1.2rem;
-    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 1rem;
     }
+    .creation_compte input {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    }
+    .champs_creation_compte{
+    height: 25px;
+    width: 250px;
+    margin-bottom: 15px;
+    }
+
+
+    .valider_creation_compte {
+    width: 60px;
+    height: 33px;
+    border: none;
+    margin-left: 190px;
+    }
+    
+    /*MUR*/
+    .bonjour {
+    top:60px;
+    left: 140px;
+    font-size: 1rem;
+    }
+    
+    .fond_avatar{
+        display: none;
+    }
+    .fond_avatar_responsive {
+        display: block;
+        position: absolute;
+    }
+    
     .deconnexion{
-    list-style: none;
-    position: absolute;
     bottom: 5px;
     left: 5px;
     }
@@ -442,27 +515,52 @@ nav {
     background-color: white;
     }
     .crayon_avatar{
-    position: absolute;
     height: 40px;
     top: 10px;
-    left: 90px;
+    left: 120px;
     }
 
-    .fond_avatar {
-    display: none;
-    }
     .profil_avatar{
-    height: 40px;
-    position: absolute;
-    top: 80px;
-    left: 90px;
+    height: 40px; 
+    top: 110px;
+    left: 20px;
     }
     .profil_nom{
-    position: absolute;
-    top:95px;
-    left: 130px;
-    color: white;
+    top:125px;
+    left: 60px;
     } 
+    /*ELEMENTS COMPOSANT LE MUR*/
+
+#mon_mur {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-areas: 
+        "m1"
+        "m2"
+        "m4"
+        "m3";
+}
+.invit {
+    grid-area: m2;  
+}
+
+.invit_recues {
+    grid-area: m4;
+}
+
+.vos_amis {
+    grid-area: m1;
+}
+
+.amis_fleche {
+    height: 50px;
+  
+}
+
 }
 
 
