@@ -15,6 +15,7 @@ ob_start(); // Je démarre le buffer de sortie : les données à afficher sont s
     <meta charset="utf-8">
     <link href="css/normalize.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Secteur</title>
@@ -40,6 +41,10 @@ if (isset($_SESSION['info'])) {
     <ul>
         <?php
         if (isset($_SESSION['id'])) {
+			echo "<nav><form action='index.php?action=search' method='post' styme='z-index : 10'>
+				<input type='text' name='search'>
+				<button type='submit'><i class='material-icons'>search</i></button>
+			  </form></nav>";
             echo "<div class='fond_avatar'> <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouvé !</span></p> 
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>

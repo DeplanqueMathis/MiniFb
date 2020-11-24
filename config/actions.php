@@ -9,6 +9,7 @@ $listeDesActions = array(
     "send" => "vues/invitenvoyee.php",
     "recep" => "vues/invitrecues.php",
     "amis" => "vues/amis.php",
+	"search" => "vues/search.php",
     "connexion" => "traitement/connexion.php",
     "deconnexion" => "traitement/deconnexion.php",
     "creacompte" => "traitement/creacompte.php",
