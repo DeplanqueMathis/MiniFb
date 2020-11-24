@@ -41,20 +41,13 @@ if (isset($_SESSION['info'])) {
     <ul>
         <?php
         if (isset($_SESSION['id'])) {
-<<<<<<< HEAD
 			echo "<nav><form action='index.php?action=search' method='post' styme='z-index : 10'>
 				<input type='text' name='search'>
 				<button type='submit'><i class='material-icons'>search</i></button>
 			  </form></nav>";
-            echo "<div class='fond_avatar'> <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouvé !</span></p> 
-=======
-            echo "<div class='fond_avatar'>  <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p> 
->>>>>>> ca6de65bbdec697cdc9c4fdf4beda294920ceeda
+            echo "<div class='fond_avatar'>  <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>
-            <div class='fond_avatar_responsive'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p> 
-            <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
-            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li></div>
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
             echo "<div id='mon_mur' ><li class='vos_amis' ><a href='index.php?action=amis'>Tous vos amis sont ici </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
             echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> </li>";
