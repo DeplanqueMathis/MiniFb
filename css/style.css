@@ -298,6 +298,13 @@ nav {
     opacity: 0.5;
 }
 
+.invitation_envoye {
+    color: white;
+}
+.invitation_envoye p {
+    color: #be483a;
+}
+
 .vos_amis {
     grid-area: m1;
     list-style: none;
@@ -491,6 +498,9 @@ nav {
 .search_nom {
     color: white;
     text-decoration: none;
+}
+.search_nom:hover{
+    color: #ff5e54;
 }
 
 

@@ -51,9 +51,9 @@ if (isset($_SESSION['info'])) {
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
 			if(!isset($_GET['action']) || $_GET['action']!="search"){
-				echo "<div id='mon_mur' ><li class='vos_amis' ><a href='index.php?action=amis'>Tous vos amis sont ici </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
-				echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> </li>";
-				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li>";
+				echo "<div id='mon_mur' ><li class='vos_amis' ><a href='index.php?action=amis'>Cliquez ici pour voir tous vos amis  </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
+				echo "<li class='invit'><a href='index.php?action=send'>Cliquez pour voir vos invitations envoyées</a> </li>";
+				echo "<li class='invit_recues'><a href='index.php?action=recep'>Cliquez pour voir vos invitations reçues</a></li>";
 				echo "<div class='mes_posts'>";
 				if(isset($_GET['id'])){
 					echo "<form  action='index.php?action=ecrit&id=" . $_GET['id'] . "' method='post' enctype='multipart/form-data'>";
