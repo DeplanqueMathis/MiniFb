@@ -31,17 +31,7 @@ nav {
     align-items: center;
     justify-content: center; 
 }
-/*PAGE DE CRATION DU COMPTE*/
-.creercompte {
-    margin-left: 90px;
-    text-align: right;
-    color: white;
-    list-style: none;
-    font-size: 1.5rem;
-}
-.creercompte a {
-    color: white;
-}
+/*PAGE DE CREATION DU COMPTE*/
 
 .creation_compte_seco{   
     text-align: right;
@@ -54,6 +44,9 @@ nav {
 .creation_compte_seco a {
     color: white;  
 }
+.creation_compte_seco a:hover{
+    color: #828282;
+}
 .creation_compte{
     margin-top: 15px;
     display: flex;
@@ -64,7 +57,7 @@ nav {
     box-shadow: 0 0 10px #000;
     height: 400px;
     width: 500px;
-    margin-left: 520px;
+    margin-left: 450px;
 }
 .creation_compte p {
     color: white;
@@ -106,6 +99,19 @@ nav {
 }
 
 /*PAGE DE CONNEXION A SON COMPTE*/
+.creercompte {
+    margin-left: 90px;
+    text-align: right;
+    color: white;
+    list-style: none;
+    font-size: 1.5rem;
+}
+.creercompte a {
+    color: white;
+}
+.creercompte a:hover {
+    color: #828282;
+}
 .connexion {
     margin-top: 50px;
     display: flex;
@@ -117,7 +123,7 @@ nav {
     box-shadow: 0 0 10px #000;
     height: 280px;
     width: 500px;
-    margin-left: 520px;
+    margin-left: 450px;
 }
 
 .connexion p {
@@ -348,6 +354,39 @@ nav {
     background-color: white;
     color: black;
 }
+
+.demande_accepter {
+    background-color: black;
+    border: none;
+    opacity: 0.5;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+.demande_accepter:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+}
+
+.bouton_ami {
+   background-color: black;
+    border: none;
+    opacity: 0.5;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px; 
+}
+.bouton_ami:hover{
+     transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+}
+
+
+
 /*POSSIBILITE DE POSTER SUR SON MUR*/
 .mes_posts p{
     color: white;
