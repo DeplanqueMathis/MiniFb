@@ -21,7 +21,7 @@
                // Etape 3 : ici le login est unique, donc on sait que l'on peut avoir zero ou une  seule ligne.
         if($line=$q->fetch()) {
           $ok = true;
-          echo "<nav><input type='button' value='Ami' disabled></nav>";
+          echo "<nav><input type='button' class='bouton_ami' value='Ami' disabled></nav>";
         }
 
         $sql = "SELECT user.* FROM user INNER JOIN lien ON user.id=idUtilisateur2 AND etat='attente' AND idUtilisateur1=?";
@@ -37,7 +37,7 @@
         if($line=$q->fetch()) {
           echo "<nav><form action='index.php?action=accept' method='POST'>";
           echo "<input  type='number' name='id' value='" . $_GET['id'] . "' style='display : none;'>";
-          echo "<input type='submit' value='Accepter'>";
+          echo "<input type='submit'  class='demande_accepter' value='Accepter'>";
           echo "</form></nav>";
         }
 
