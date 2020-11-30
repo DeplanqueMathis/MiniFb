@@ -28,7 +28,7 @@
         $q = $pdo->prepare($sql);
         $q->execute(array($_SESSION['id']));
         if($line=$q->fetch()) {
-          echo "<nav><input type='button' value='En attente' disabled></nav>";
+          echo "<nav><input class='demande_attente' type='button' value='En attente' disabled></nav>";
         }
 
         $sql = "SELECT user.* FROM user WHERE id IN(SELECT idUtilisateur1 FROM lien WHERE idUtilisateur2=? AND etat='attente') ";

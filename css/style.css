@@ -157,11 +157,25 @@ nav {
 .deconnexion{
     list-style: none;
     position: absolute;
-    bottom: 30px;
-    left: 30px;
-    
+    bottom:100px;
+    left: 20px; 
 }
+
 .deconnexion a:hover {
+    color: #828282;
+}
+.accueil a{
+     color: white;
+    font-size: 1.2rem;
+    text-decoration: none; 
+}
+.accueil {
+    list-style: none;
+    position: absolute;
+    bottom:130px;
+    left: 20px; 
+}
+.accueil a:hover{
     color: #828282;
 }
 .img_avatar {
@@ -250,6 +264,7 @@ nav {
         "m1 m2"
         "m3 m4";
 }
+
 .invit {
     grid-area: m2;  
     list-style: none;
@@ -319,7 +334,20 @@ nav {
     background-color: white;
     color: black;
 }
-
+.demande_attente {
+    background-color: black;
+    border: none;
+    opacity: 0.5;
+    color: white;
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+}
+.demande_attente:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+}
 /*POSSIBILITE DE POSTER SUR SON MUR*/
 .mes_posts p{
     color: white;
@@ -331,7 +359,7 @@ nav {
 .champs_posts {
     margin-bottom: 15px;
     border: none;
-    background-color: royalblue;
+    background-color: #2b4449;
     opacity: 0.5;
     color: white;
     height: 30px;
@@ -348,6 +376,10 @@ nav {
     height: 33px;
     border: none;
     margin-left: 220px;
+}
+.valider_posts:hover{
+    background-color: white;
+    color: black;
 }
 
 /*POSTS PUBLIER*/
@@ -367,12 +399,61 @@ nav {
     margin-bottom: 2px;
     font-size: 0.7rem;
 }
+.post_publier a {
+    text-decoration: none;
+    color: #2b4448;
+}
 .img_publi {
     height: 35px;
     width: 345px;
     color: white;
     border-radius: 20px;
 }
+
+/*pour trouver un ami*/
+
+.search {
+    position: absolute;
+    top: 100px;
+    right: 5px;
+}
+.search input{
+    background-color: #9c4a3e;
+    border: none;
+    border-radius: 30px;
+    opacity: 0.5;
+    height: 25px;
+    width: 200px;
+
+}
+.search input:hover {
+    color: white;
+}
+.search button {
+    background-color: white;
+    opacity: 0.5;
+    border: none;
+    border-radius: 10px;
+    height: 30px;
+
+}
+.search button:hover{
+    background-color: black;
+    color: white;
+}
+.search_p {
+    color: white;
+   margin-right: 15px;
+}
+.search_avatar {
+    border-radius: 40px;
+    margin-right: 15px;
+}
+.search_nom {
+    color: white;
+    text-decoration: none;
+}
+
 
 /*PAGE ERREUR 404*/
 .erreur_404{
