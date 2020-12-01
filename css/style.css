@@ -265,10 +265,11 @@ nav {
     margin-left: 550px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 150px;
+    grid-gap: 50px;
     grid-template-areas: 
         "m1 m2"
         "m3 m4";
+        /*"m5 m5";*/
 }
 
 .invit {
@@ -297,12 +298,39 @@ nav {
     color: lightskyblue;
     opacity: 0.5;
 }
+.invitation_recue {
+    color: white;
+}
+.invitation_recue a {
+    text-decoration: none;
+    color: white;
+
+}
+.invitation_recue input {
+    background-color: black;
+    border: none;
+    opacity: 0.5;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+}
+.invitation_recue input:hover{
+    transition-duration: 0.5s;
+    background-color: white;
+    color: black;
+}
+
 
 .invitation_envoye {
     color: white;
 }
 .invitation_envoye p {
     color: #be483a;
+}
+.invitation_envoye span:hover {
+    color: lightskyblue;
+    opacity: 0.5;
 }
 
 .vos_amis {
@@ -324,13 +352,37 @@ nav {
     height: 70px;
     /*top: 190px;
     margin-left: -40px;*/
-    /*transform: rotate(45deg);*/
+    transform: rotate(90deg);
     transition: all 0.7s;
 }
 .amis_fleche:hover,
 .amis_fleche:focus {
-    transform: rotate(360deg);
+    transform: rotate(450deg);
 }
+.mes_amis a{
+    color: white;
+    text-decoration: none;
+     position:relative;
+    z-index:24;
+}
+.mes_amis a:hover{
+   color: lightskyblue;
+}
+.mes_amis span {
+    display: none;
+}
+.mes_amis:hover span { 
+    display:block;
+    position:absolute;
+    top:2em; left:2em; width:12em; height: 1.5em;
+    border:none;
+    text-align: center;
+    border-radius: 20px;
+    background-color:#555;
+    color:black;
+    opacity: 0.5;
+}
+
 
 /*sur les amis*/
 .demander_ami {
@@ -429,6 +481,9 @@ nav {
 }
 
 /*POSTS PUBLIER*/
+.all-post {
+    margin-left: 100px;
+}
 .post_publier { 
     margin: 20px;
     background-color: white;

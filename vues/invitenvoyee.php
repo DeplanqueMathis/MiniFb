@@ -7,11 +7,13 @@
     echo "<nav><div class='invitation_envoye' >";
       echo "<p>Les invitations que vous avez envoyé : </p> </br>";
     echo "A " . $line['login'] . "<br/>";
-    echo "En attente d'une réponse";
+    echo "<span>En attente d'une réponse</span>";
     echo "</div></nav>";
   }
   if($line!=$q->fetch()){
-    echo "Vous n'avez aucune demande en attente";
+    echo "<nav>";
+      echo "Vous n'avez aucune demande en attente";
+      echo "</nav>";
   }
 
 ?>

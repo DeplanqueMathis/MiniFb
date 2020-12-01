@@ -4,8 +4,8 @@ $sql = "SELECT * FROM user WHERE id IN ( SELECT user.id FROM user INNER JOIN lie
 $q = $pdo->prepare($sql);
 $q->execute(array($_SESSION['id'],$_SESSION['id']));
 while($line=$q->fetch()) {
-  echo "<nav><div style='border : 1px solid black; width : 10rem'>";
-  echo "<a href='index.php?id=" . $line["id"] . "'>" . $line['login'] . "</a><br/>";
+  echo "<nav><div class='mes_amis'>";
+  echo "<a href='index.php?id=" . $line["id"] . "'> " . $line['login'] . "<span>Cliquez pour voir son mur</span></a><br/>";
   echo "</div></nav>";
 }
 
