@@ -3,17 +3,18 @@
   $sql = "SELECT user.* FROM user INNER JOIN lien ON user.id=idUtilisateur2 AND etat='attente' AND idUtilisateur1=?";
   $q = $pdo->prepare($sql);
   $q->execute(array($_SESSION['id']));
-  while($line=$q->fetch()) {
-    echo "<nav><div class='invitation_envoye' >";
-      echo "<p>Les invitations que vous avez envoyé : </p> </br>";
-    echo "A " . $line['login'] . "<br/>";
-    echo "<span>En attente d'une réponse</span>";
-    echo "</div></nav>";
-  }
-  if($line!=$q->fetch()){
-    echo "<nav>";
-      echo "Vous n'avez aucune demande en attente";
-      echo "</nav>";
-  }
+	$results = $q->fetchall();
+	if(empty($results)){
+		echo "<nav> Vous n'avez aucune demande en attente</nav>";
+	}
+	else{
+		foreach($results as $line){
+			echo "<nav><div class='invitation_envoye' >";
+			echo "<p>Les invitations que vous avez envoyé : </p> </br>";
+			echo "A " . $line['login'] . "<br/>";
+			echo "En attente d'une réponse";
+			echo "</div></nav>";
+  		}
+	}
 
 ?>
