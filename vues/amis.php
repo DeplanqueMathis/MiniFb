@@ -13,6 +13,5 @@ else{
 		echo "<a href='index.php?id=" . $line["id"] . "'>" . $line['login'] . "</a><br/>";
 		echo "</div></nav>";
 	}
-}
 
 ?>
