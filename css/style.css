@@ -261,39 +261,55 @@ nav {
 
 /*ELEMENTS COMPOSANT LE MUR*/
 
-#mon_mur {
-    margin-left: 550px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
-    grid-template-areas: 
-        "m1 m2"
-        "m3 m4";
-        /*"m5 m5";*/
+
+.menu_ouvrir img{
+    height: 100px;
 }
 
-.invit {
-    grid-area: m2;  
+#menu_amis p {
+    margin-top:50px;
+    position: absolute;
+}
+#menu_amis .img_open img {
+    position: relative;
+}
+#menu_amis, #menu_amis ul {
+    padding: 0;
+    margin: 0;
+    width: 180px;
     list-style: none;
 }
+#menu_amis p {
+    color: white;
+}
+#menu_amis ul {
+    position: absolute;
+    left: -999em;
+}
+#menu_amis il {
+    position: relative;
+    background: black;
+   
+}
 
-.invit a {
+
+#menu_amis a {
+    display: block;
     text-decoration: none;
     color: white;
 }
+#menu_amis li:hover ul {
+    top: 180px;
+    left: 650px;
+   
+}
+
 .invit a:hover{
     color: lightskyblue;
     opacity: 0.5;
-}
-.invit_recues {
-    grid-area: m4;
-    list-style: none;
+   
 }
 
-.invit_recues a {
-    text-decoration: none;
-    color: white;
-}
 .invit_recues a:hover{
     color: lightskyblue;
     opacity: 0.5;
@@ -374,7 +390,7 @@ nav {
 .mes_amis:hover span { 
     display:block;
     position:absolute;
-    top:2em; left:2em; width:12em; height: 1.5em;
+    left: 5em; top: -0.1em; width:12em; height: 1.5em;
     border:none;
     text-align: center;
     border-radius: 20px;
@@ -382,7 +398,9 @@ nav {
     color:black;
     opacity: 0.5;
 }
-
+.mes_amis p {
+    color: #be483a;
+}
 
 /*sur les amis*/
 .demander_ami {
@@ -512,7 +530,9 @@ nav {
 }
 
 /*pour trouver un ami*/
-
+.search_responsive {
+    display: none;
+}
 .search {
     position: absolute;
     top: 100px;

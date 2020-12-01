@@ -45,15 +45,22 @@ if (isset($_SESSION['info'])) {
 				<input type='text' name='search' placeholder='  Rechercher un utilisateur'>
 				<button type='submit'><i class='material-icons'>search</i></button>
 			  </form></nav>";
+            echo "<nav><form class='search_responsive' action='index.php?action=search' method='post' styme='z-index : 10'>
+				<input type='text' name='search' placeholder='  Rechercher un utilisateur'>
+				<button type='submit'><i class='material-icons'>search</i></button>
+			  </form></nav>";
             echo "<div class='fond_avatar'>  <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
             <li class='accueil'> <a href='index.php'> Accueil</a></li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
 			if(!isset($_GET['action']) || $_GET['action']!="search"){
-				echo "<div id='mon_mur' ><li class='vos_amis' ><a href='index.php?action=amis'>Cliquez ici pour voir tous vos amis  </a><img class='amis_fleche' src='images/fleche.png' alt='fleche'></li>";
-				echo "<li class='invit'><a href='index.php?action=send'>Cliquez pour voir vos invitations envoyées</a> </li>";
-				echo "<li class='invit_recues'><a href='index.php?action=recep'>Cliquez pour voir vos invitations reçues</a></li>";
+				echo "<div id='mon_mur' >
+                <ul id='menu_amis'><li><p>Mes amis </p> <a href='ouvrir' class='menu_ouvrir'><img  class='img_open' src='images/amis.png' alt='ouvrir'> </a>
+                
+                <ul><li class='vos_amis' ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
+				echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
+				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li></ul></li></ul> ";
 				echo "<div class='mes_posts'>";
 				if(isset($_GET['id'])){
 					echo "<form  action='index.php?action=ecrit&id=" . $_GET['id'] . "' method='post' enctype='multipart/form-data'>";
@@ -62,12 +69,12 @@ if (isset($_SESSION['info'])) {
 					echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
 				}
 				echo 
-				"<p> Vos Posts : </p>
+				"<p> Vos Posts : <img class='amis_fleche' src='images/fleche.png' alt='fleche'> </p>
 				<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
 				<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
 				<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
 				<input class='valider_posts' type='submit' value='Publier'>
-				</form></div> </div>";
+				</form></div>";
 			}
             
         }/* else {
