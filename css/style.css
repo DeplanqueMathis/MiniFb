@@ -250,6 +250,9 @@ nav {
     transform:scale(1) rotate(0);   
      opacity:1;
 }
+.profil_responsive {
+    display: none;
+}
 .bonjour{
     list-style: none;
     color: white;
@@ -310,7 +313,9 @@ nav {
    transition-duration: 1s; 
 }
 
-
+.menu_responsive {
+    display: none;
+}
 /*LES INVITATIONS RECUES ENVOYES ET AMIS*/
 
 .invit a:hover{
@@ -393,8 +398,10 @@ nav {
     color: white;
     margin-left: 500px;
 }
+.vos_amis_responsive {
+    display: none;
+}
 .vos_amis {
-    grid-area: m1;
     list-style: none;
 }
 
@@ -576,9 +583,7 @@ nav {
 }
 
 /*pour trouver un ami*/
-.search_responsive {
-    display: none;
-}
+
 .search {
     position: absolute;
     top: 100px;
@@ -669,7 +674,7 @@ nav {
     display: flex; 
     align-items: center;
     justify-content: center; 
-}
+    }
     .connexion {
         height: 200px;
         width: 300px;
@@ -740,82 +745,80 @@ nav {
     /*MUR*/
     .bonjour {
     top:60px;
-    left: 140px;
+    left: 100px;
     font-size: 1rem;
     }
     
     .fond_avatar{
         display: none;
     }
-    .fond_avatar_responsive {
+    .menu_responsive {
         display: block;
-        position: absolute;
     }
     
-    .deconnexion{
-    bottom: 5px;
-    left: 5px;
+    .accueil {
+        top: 5px;
+        left: 5px; 
+    }
+    .accueil a {
+        font-size: 0.8rem;
+    }
+    .deconnexion {
+        top: 20px;
+        left: 5px;
+    }
+    .deconnexion a {
+        font-size: 0.8rem;
+    }
+    .profil_responsive {
+        display: block;
+    }
+    .profil_responsive img{
+        height: 60px;
+        top: 60px;
+        left: 10px;
+    }
+    .profil_responsive p {
+        color: #be483a;
+        margin-left: 10px;
     }
     
-    .img_avatar {
-    position: absolute;
-    height: 100px;
-    border-radius: 50%; 
-    left: 10px;
-    top: 10px;
-    background-color: white;
-    }
-    .crayon_avatar{
-    height: 40px;
-    top: 10px;
-    left: 120px;
-    }
-
-    .profil_avatar{
-    height: 40px; 
-    top: 110px;
-    left: 20px;
-    }
-    .profil_nom{
-    top:125px;
-    left: 60px;
-    } 
     /*ELEMENTS COMPOSANT LE MUR*/
 
-#mon_mur {
-    margin-left: 50px;
-    margin-bottom: 20px;
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 40px;
-    grid-template-areas: 
-        "m1"
-        "m2"
-        "m4"
-        "m3";
-}
-.invit {
-    grid-area: m2;  
-}
-
-.invit_recues {
-    grid-area: m4;
-}
-
-.vos_amis {
-    grid-area: m1;
-}
-
-.amis_fleche {
-    height: 50px;
-  
-}
-
-}
-
-
-
+    .mes_posts {
+        margin-top: 50px;
+        margin-left: 15px;
+    }
+    .all-post {
+        margin-left: 0;
+    }
+    #menu_amis {
+        display: none;
+    }
+    .vos_amis_responsive{
+        display: block;
+        margin-left: 15px;
+        margin-top: 50px;
+    }
+    
+    .vos_amis_responsive li{
+        list-style: none;
+    }
+    .vos_amis_responsive a{
+        color: white;
+    }
+    
+    /*RECHERCHE D'UTILISATEURS*/
+    .search_p {
+        margin-top: 50px;
+    }
+    .search_nom  {
+        margin-top: 50px;
+    }
+    .search_avatar  {
+        margin-top: 50px;
+    }
+    
 footer{
    
 }

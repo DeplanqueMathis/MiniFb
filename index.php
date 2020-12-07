@@ -45,10 +45,11 @@ if (isset($_SESSION['info'])) {
 				<input type='text' name='search' placeholder='  Rechercher un utilisateur'>
 				<button type='submit'><i class='material-icons'>search</i></button>
 			  </form></nav>";
-            echo "<nav><form class='search_responsive' action='index.php?action=search' method='post' styme='z-index : 10'>
-				<input type='text' name='search' placeholder='  Rechercher un utilisateur'>
-				<button type='submit'><i class='material-icons'>search</i></button>
-			  </form></nav>";
+            
+            echo "<ul class='menu_responsive'><li class='accueil'> <a href='index.php'> Accueil</a></li>
+            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li></ul>";
+            echo "<div class='profil_responsive'><p> " . $_SESSION['login'] . "</p><img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'></div>";
+            
             echo "<div class='fond_avatar'>  <a href='index.php?action=modif'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'></a> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
             <li class='accueil'> <a href='index.php'> Accueil</a></li>
@@ -61,6 +62,9 @@ if (isset($_SESSION['info'])) {
                 <ul><li class='vos_amis' ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
 				echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
 				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li></ul></li></ul> ";
+                echo "<ul class='vos_amis_responsive' ><li ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
+                echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
+				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li></ul> ";
 				if(!isset($_GET['id'])){
 					echo "<div class='mes_posts'>";
 					if(isset($_GET['id'])){
@@ -70,7 +74,7 @@ if (isset($_SESSION['info'])) {
 						echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
 					}
 					echo 
-					"<p> Poster quand vous voulez :  </p>
+					"<p> Poster quand vous le voulez :  </p>
 					<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
 					<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
 					<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
