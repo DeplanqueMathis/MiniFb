@@ -10,10 +10,12 @@ $listeDesActions = array(
     "recep" => "vues/invitrecues.php",
     "amis" => "vues/amis.php",
 	"search" => "vues/search.php",
+	"modif" => "vues/modif.php",
     "connexion" => "traitement/connexion.php",
     "deconnexion" => "traitement/deconnexion.php",
     "creacompte" => "traitement/creacompte.php",
     "accept" => "traitement/accept.php",
     "demande" => "traitement/demande.php",
+    "enrmodif" => "traitement/modif.php",
 	"ecrit" => "traitement/ecrit.php"
 );

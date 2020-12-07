@@ -55,7 +55,10 @@
        // A completer. Il faut récupérer une ligne, si il y en a pas ca veut dire que lon est pas ami avec cette personne
    }
    if($ok==false) {
-       echo "Vous n êtes pas encore ami, vous ne pouvez voir son mur !!";
+       echo "<nav>Vous n êtes pas encore ami, vous ne pouvez voir son mur !!</nav>";
+	   if(!isset($_GET['lien'])){
+		   header("Location: index.php?id=". $_GET['id'] ."&lien=non");
+	   }
    } else {
    // A completer
    // Requête de sélection des éléments dun mur
