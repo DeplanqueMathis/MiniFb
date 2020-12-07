@@ -49,7 +49,7 @@ if (isset($_SESSION['info'])) {
 				<input type='text' name='search' placeholder='  Rechercher un utilisateur'>
 				<button type='submit'><i class='material-icons'>search</i></button>
 			  </form></nav>";
-            echo "<div class='fond_avatar'>  <img class='crayon_avatar' src='images/crayon.png' alt='crayon'> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
+            echo "<div class='fond_avatar'>  <a href='index.php?action=modif'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'></a> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
             <li class='accueil'> <a href='index.php'> Accueil</a></li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>
