@@ -14,6 +14,4 @@ else{
   		echo "<a href='index.php?id=" . $line["id"] . "'> " . $line['login'] . "<span>Cliquez pour voir son mur</span></a><br/>";
 	}
 	echo "</div></nav>";
-}
-
-?>
+}?>
