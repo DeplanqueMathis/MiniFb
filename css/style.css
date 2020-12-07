@@ -386,6 +386,7 @@ nav {
 
 .invitation_envoye {
     color: white;
+    margin-left: 500px;
 }
 .invitation_envoye p {
     color: #be483a;
@@ -412,6 +413,10 @@ nav {
 .vos_amis a:hover{
     color: lightskyblue;
     opacity: 0.5;
+}
+.pas_amis {
+    color: white;
+    margin-left: 500px;
 }
 
 .amis_fleche {
