@@ -5,7 +5,7 @@
   $q->execute(array($_SESSION['id']));
 	$results = $q->fetchall();
 	if(empty($results)){
-		echo "<nav> Vous n'avez aucune demande en attente</nav>";
+		echo "<nav> <p class='pasinvitenvoye'>Vous n'avez aucune demande en attente</p></nav>";
 	}
 	else{
 		foreach($results as $line){

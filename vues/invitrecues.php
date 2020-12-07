@@ -4,7 +4,7 @@ $sql = "SELECT user.* FROM user WHERE id IN(SELECT idUtilisateur1 FROM lien WHER
 $q = $pdo->prepare($sql);
 $q->execute(array($_SESSION['id']));
   if(empty($results)){
-		echo "<nav> Vous n'avez aucune demande en attente</nav>";
+		echo "<nav> <p class='pasinvitrecue'>Aucune ? que c'est triste de ne pas avoir d'amis...</p><img class='pasinvitrecue_img' src='../images/memepleure.jpg' alt='pleure'></nav>";
 	}
 	else{
 		foreach($results as $line){
