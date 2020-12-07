@@ -70,7 +70,7 @@ if (isset($_SESSION['info'])) {
 						echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
 					}
 					echo 
-					"<p> Vos Posts :  </p>
+					"<p> Poster quand vous voulez :  </p>
 					<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
 					<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
 					<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>

@@ -9,13 +9,13 @@ $results = $q->fetchall();
 	}
 	else{
 		foreach($results as $line){
-			echo "<nav><div style='border : 1px solid black; width : 10rem'>";
-			echo "<a href='index.php?id=" . $line['id'] . "'>" . $line['login'] . "</a><br/>";
+			echo "<nav><div class='invitrecue'>";
+			echo "<a href='index.php?id=" . $line['id'] . "'>De " . $line['login'] . "</a><br/><br/>";
+            echo "<p>En attente d'une réponse</p><br/>";
 			echo "<form action='index.php?action=accept' method='POST'>";
 			echo "<input type='number' name='id' value='" . $line['id'] . "' style='display : none;'>";
 			echo "<input type='submit' value='Accepter'>";
 			echo "</form>";
-			echo "En attente d'une réponse";
 			echo "</div></nav>";
 		}
 	}
