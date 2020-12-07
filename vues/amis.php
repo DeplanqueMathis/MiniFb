@@ -5,7 +5,7 @@ $q = $pdo->prepare($sql);
 $q->execute(array($_SESSION['id'],$_SESSION['id']));
 $results = $q->fetchall();
 if(empty($results)){
-	echo "<nav>Vous n'avez pas d'amis prenez un Curly !</nav>";
+	echo "<nav><p class='pas_amis'>Vous n'avez pas d'amis prenez un Curly !</p></nav>";
 }
 else{
 	echo "<nav><div class='mes_amis'>";
