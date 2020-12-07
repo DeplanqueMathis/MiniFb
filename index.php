@@ -91,11 +91,10 @@ if (isset($_SESSION['info'])) {
 				}
 			}
             
-        }/* else {
-            echo /*"<li><a href='index.php?action=login'>Login</a></li>"
-            <li class='creercompte'><p>Pas encore de compte ?</p><a href='index.php?action=creation'>Rejoins-nous !</a></li>";*/
-       /* }*/
+        }
+		}
         ?>
+		
 
     </ul>
 </nav>
