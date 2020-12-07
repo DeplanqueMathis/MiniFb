@@ -56,7 +56,7 @@ if (isset($_SESSION['info'])) {
 			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
 			if(!isset($_GET['action']) || $_GET['action']!="search"){
 				echo "<div id='mon_mur' >
-                <ul id='menu_amis'><li><p>Mes amis </p> <a href='ouvrir' class='menu_ouvrir'><img  class='img_open' src='images/amis.png' alt='ouvrir'> </a>
+                <ul id='menu_amis'><li><p>Mes amis </p> <img class='amis_fleche' src='images/fleche.png' alt='fleche'> <a href='ouvrir' class='menu_ouvrir'><img  class='img_open' src='images/amis.png' alt='ouvrir'> </a>
                 
                 <ul><li class='vos_amis' ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
 				echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
@@ -69,7 +69,7 @@ if (isset($_SESSION['info'])) {
 					echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
 				}
 				echo 
-				"<p> Vos Posts : <img class='amis_fleche' src='images/fleche.png' alt='fleche'> </p>
+				"<p> Vos Posts :  </p>
 				<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
 				<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
 				<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>

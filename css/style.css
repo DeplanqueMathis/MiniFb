@@ -260,14 +260,22 @@ nav {
 }
 
 /*ELEMENTS COMPOSANT LE MUR*/
-
-
-.menu_ouvrir img{
-    height: 100px;
+/*LES AMIS*/
+#menu_amis {
+    position: absolute;
+    top: 150px;
+    right: 0px;
 }
 
+.menu_ouvrir img{
+    height: 100px; 
+    opacity: 0.5;
+}
+
+
 #menu_amis p {
-    margin-top:50px;
+    margin-top:70px;
+    right: 15px;
     position: absolute;
 }
 #menu_amis .img_open img {
@@ -287,9 +295,7 @@ nav {
     left: -999em;
 }
 #menu_amis il {
-    position: relative;
-    background: black;
-   
+    position: relative;  
 }
 
 
@@ -299,15 +305,17 @@ nav {
     color: white;
 }
 #menu_amis li:hover ul {
-    top: 180px;
-    left: 650px;
-   
+    top: 100px;
+    left:  -10px;
+   transition-duration: 1s; 
 }
+
+
+/*LES INVITATIONS RECUES ENVOYES ET AMIS*/
 
 .invit a:hover{
     color: lightskyblue;
     opacity: 0.5;
-   
 }
 
 .invit_recues a:hover{
@@ -337,6 +345,14 @@ nav {
     color: black;
 }
 
+.pasinvitrecue_img  {
+    height: 100px;
+}
+.pasinvitrecue {
+    color: white;
+    margin-left: 500px;
+}
+
 
 .invitation_envoye {
     color: white;
@@ -348,7 +364,10 @@ nav {
     color: lightskyblue;
     opacity: 0.5;
 }
-
+.pasinvitenvoye {
+    color: white;
+    margin-left: 500px;
+}
 .vos_amis {
     grid-area: m1;
     list-style: none;
@@ -366,6 +385,7 @@ nav {
 .amis_fleche {
     position: absolute;
     height: 70px;
+    right: 0;
     /*top: 190px;
     margin-left: -40px;*/
     transform: rotate(90deg);
@@ -470,7 +490,7 @@ nav {
     margin-bottom: 15px;
 }
 .mes_posts {
-    grid-area: m3;
+    margin-left: 140px;
 }
 .champs_posts {
     margin-bottom: 15px;
@@ -509,6 +529,7 @@ nav {
     opacity: 0.5;
     border-radius: 5px;
     padding: 5px;
+    
 }
 .post_publier img {
     height: 40px;
