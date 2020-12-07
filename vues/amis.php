@@ -3,7 +3,7 @@
 $sql = "SELECT * FROM user WHERE id IN ( SELECT user.id FROM user INNER JOIN lien ON idUtilisateur1=user.id AND etat='ami' AND idUTilisateur2=? UNION SELECT user.id FROM user INNER JOIN lien ON idUtilisateur2=user.id AND etat='ami' AND idUTilisateur1=?)";
 $q = $pdo->prepare($sql);
 $q->execute(array($_SESSION['id'],$_SESSION['id']));
-<<<<<<< HEAD
+
 
 while($line=$q->fetch()) {
   echo "<nav><div class='mes_amis'>";
@@ -15,11 +15,7 @@ $results = $q->fetchall();
 if(empty($results)){
 	echo "<nav>Vous n'avez pas d'amis prenez un Curly !</nav>";
 
-=======
-$results = $q->fetchall();
-if(empty($results)){
-	echo "<nav>Vous n'avez pas d'amis prenez un Curly !</nav>";
->>>>>>> e49253eb75ee273fc23ba18fdee12bea1c496f57
+
 }
 else{
 	echo "<nav><div class='mes_amis'>";
@@ -28,6 +24,4 @@ else{
   		echo "<a href='index.php?id=" . $line["id"] . "'> " . $line['login'] . "<span>Cliquez pour voir son mur</span></a><br/>";
 	}
 	echo "</div></nav>";
-}
-
-?>
+}?>
