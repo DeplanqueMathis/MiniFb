@@ -61,20 +61,22 @@ if (isset($_SESSION['info'])) {
                 <ul><li class='vos_amis' ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
 				echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
 				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li></ul></li></ul> ";
-				echo "<div class='mes_posts'>";
-				if(isset($_GET['id'])){
-					echo "<form  action='index.php?action=ecrit&id=" . $_GET['id'] . "' method='post' enctype='multipart/form-data'>";
+				if(!isset($_GET['id'])){
+					echo "<div class='mes_posts'>";
+					if(isset($_GET['id'])){
+						echo "<form  action='index.php?action=ecrit&id=" . $_GET['id'] . "' method='post' enctype='multipart/form-data'>";
+					}
+					else{
+						echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
+					}
+					echo 
+					"<p> Vos Posts :  </p>
+					<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
+					<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
+					<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
+					<input class='valider_posts' type='submit' value='Publier'>
+					</form></div>";
 				}
-				else{
-					echo "<form  action='index.php?action=ecrit' method='post' enctype='multipart/form-data'>";
-				}
-				echo 
-				"<p> Vos Posts :  </p>
-				<input class='champs_posts' type='text' name='titre' placeholder=' Titre de la publication'><br/>
-				<input class='champs_posts' type='text' name='message' placeholder='  Votre message'><br/>
-				<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
-				<input class='valider_posts' type='submit' value='Publier'>
-				</form></div>";
 			}
             
         }/* else {
