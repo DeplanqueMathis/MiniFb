@@ -23,7 +23,9 @@ header{
    margin-bottom: 70px;
 }
 header img {
-    position: relative;
+    position: absolute;
+	top: 0;
+	right: 0;
      height: 100px;
 }
 nav {
