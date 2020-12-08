@@ -23,8 +23,13 @@ header{
    margin-bottom: 70px;
 }
 header img {
-    position: relative;
-    height: 100px;
+
+
+    position: absolute;
+	top: 0;
+	right: 0;
+     height: 100px;
+
 }
 nav {
     display: flex; 
