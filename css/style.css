@@ -24,7 +24,7 @@ header{
 }
 header img {
     position: relative;
-     height: 100px;
+    height: 100px;
 }
 nav {
     display: flex; 
@@ -97,7 +97,10 @@ nav {
     border: none;
     margin-left: 265px;
 }
-
+.valider_creation_compte:hover {
+    background-color: white;
+    color: black;
+}
 /*PAGE DE CONNEXION A SON COMPTE*/
 .creercompte {
     margin-left: 90px;
@@ -152,7 +155,10 @@ nav {
     margin-left: 265px;
 }
 
-
+.valider:hover {
+    background-color: white;
+    color: black;
+}
 
 /*PAGE DU MUR DE LA PERSONNE CONNECTE*/ 
 .deconnexion  a{
@@ -163,7 +169,7 @@ nav {
 .deconnexion{
     list-style: none;
     position: absolute;
-    bottom:100px;
+    bottom:20px;
     left: 20px; 
 }
 
@@ -178,7 +184,7 @@ nav {
 .accueil {
     list-style: none;
     position: absolute;
-    bottom:130px;
+    bottom:50px;
     left: 20px; 
 }
 .accueil a:hover{
@@ -543,9 +549,7 @@ nav {
     color: white;
     margin-bottom: 15px;
 }
-.mes_posts {
-    margin-left: 140px;
-}
+
 .champs_posts {
     margin-bottom: 15px;
     border: none;
@@ -574,7 +578,7 @@ nav {
 
 /*POSTS PUBLIER*/
 .all-post {
-    margin-left: 100px;
+    margin-left: -40px;
 }
 .post_publier { 
     margin: 20px;
