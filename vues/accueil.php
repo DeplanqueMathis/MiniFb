@@ -74,10 +74,11 @@
 	echo "<div class='all-post'>";
     while($line=$q->fetch()) {
 		echo "<nav><div class='post_publier' > <b>";
-		echo $line['titre'] . "</b><br/>";
-		if($_SESSION['id'] == $line['idAuteur'] || $_SESSION['id'] == $line['idAmi']){
-			echo"<a class='img_supprimer' href='index.php?action=delete&id=" . $line['id'] . "'> <img   src='../images/croix.png' alt='supprimer'></a> ";
+        if($_SESSION['id'] == $line['idAuteur'] || $_SESSION['id'] == $line['idAmi']){
+			echo"<a class='img_supprimer' href='index.php?action=delete&id=" . $line['id'] . "'> <img   src='images/croix.png' alt='supprimer'></a> ";
 		}
+		echo $line['titre'] . "</b><br/>";
+		
 		echo $line['contenu'] . "<br/><p>";
 		echo $line['dateEcrit'] . "</p>";
 		if(!empty($line['image'])){

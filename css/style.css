@@ -334,7 +334,9 @@ nav {
 
 
 /*FORMULAIRE DE MODIFICATION DU PROFIL*/
-
+.modif_profil {
+    margin-top: 100px;
+}
 .modif_profil legend{
     color: white;
     padding: 10px 10px;;
@@ -616,7 +618,7 @@ nav {
     opacity: 0.5;
     border-radius: 5px;
     padding: 5px;
-    
+    position: relative;
 }
 .post_publier img {
     height: 80px;
@@ -641,6 +643,8 @@ nav {
 .img_supprimer img {
     height: 30px;
     width: 30px;
+    right: 10px;
+    position: absolute;
 }
 
 /*pour trouver un ami*/
