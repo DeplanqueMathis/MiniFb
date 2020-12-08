@@ -18,5 +18,6 @@ $listeDesActions = array(
     "demande" => "traitement/demande.php",
     "enrmodif" => "traitement/modif.php",
     "delete" => "traitement/delete.php",
+    "jaime" => "traitement/jaime.php",
 	"ecrit" => "traitement/ecrit.php"
 );

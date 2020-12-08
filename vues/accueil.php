@@ -62,21 +62,18 @@
    } else {
    // A completer
    // Requête de sélection des éléments dun mur
-    $sql = "SELECT * FROM ecrit
-			JOIN user ON user.id = ecrit.idAuteur
-			WHERE idAmi=? order by dateEcrit DESC";
+    $sql = "SELECT ecrit.*,user.login FROM ecrit
+			INNER JOIN user ON user.id = ecrit.idAuteur
+			WHERE ecrit.idAmi=?
+			ORDER BY ecrit.dateEcrit DESC";
     $q = $pdo->prepare($sql);
     $q->execute(array($id));
 	echo "<div class='all-post'>";
     while($line=$q->fetch()) {
 		echo "<nav><div class='post_publier' > <b>";
-<<<<<<< HEAD
 		echo $line['titre'] . "</b><br/>";
 		if($_SESSION['id'] == $line['idAuteur'] || $_SESSION['id'] == $line['idAmi']){
-=======
-        if($_SESSION['id'] == $line['idAuteur'] || $_SESSION['id'] == $line['idAmi']){
->>>>>>> f0d28fd02abee2ba7ed9a2027415f923d2ec6d3b
-			echo"<a class='img_supprimer' href='index.php?action=delete&id=" . $line['id'] . "'> <img   src='images/croix.png' alt='supprimer'></a> ";
+			echo"<a class='img_supprimer' href='index.php?action=delete&id=" . $line['0'] . "'> <img   src='images/croix.png' alt='supprimer'></a> ";
 		}
 		echo $line['titre'] . "</b><br/>";
 		
@@ -86,12 +83,7 @@
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
 		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé*/
 		echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a>";
-		if(isset($lien['jaime.id'])){
-			"<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&like=already'>Déja aimé</a>";
-		}
-		else{
-			"<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&like=no'>J'aime</a>";
-		}
+		echo "<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'>J'aime</a> (" . $line['aime'] . ")";
 		echo "</div> </nav>";
     }
 	echo "</div>";
