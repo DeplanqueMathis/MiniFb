@@ -318,6 +318,23 @@ nav {
 .menu_responsive {
     display: none;
 }
+/*FORMULAIRE DE MODIFICATION DU PROFIL*/
+
+.modif_profil legend{
+    color: white;
+    padding: 10px 10px;;
+}
+.modif_profil p {
+    color: #f04a3e;
+}
+.modif_profil .champs_creation_compte{
+    border-radius: 10px;
+}
+
+.modif_profil .valider_creation_compte:hover {
+    background-color: white;
+    color: black;
+}
 /*LES INVITATIONS RECUES ENVOYES ET AMIS*/
 
 .invit a:hover{
@@ -382,13 +399,12 @@ nav {
 }
 .pasinvitrecue {
     color: white;
-    margin-left: 500px;
+    margin-left: 200px;
 }
 
 
 .invitation_envoye {
     color: white;
-    margin-left: 500px;
 }
 .invitation_envoye p {
     color: #be483a;
@@ -399,7 +415,6 @@ nav {
 }
 .pasinvitenvoye {
     color: white;
-    margin-left: 500px;
 }
 .vos_amis_responsive {
     display: none;
@@ -418,7 +433,6 @@ nav {
 }
 .pas_amis {
     color: white;
-    margin-left: 500px;
 }
 
 .amis_fleche {
@@ -434,6 +448,7 @@ nav {
 .amis_fleche:focus {
     transform: rotate(450deg);
 }
+
 .mes_amis a{
     color: white;
     text-decoration: none;

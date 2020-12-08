@@ -4,11 +4,11 @@
 		$q->execute(array($_SESSION['id']));
 		if($line=$q->fetch()) {
 			echo "<nav>
-				<form method='post' action='index.php?action=enrmodif' enctype='multipart/form-data'>
+				<form class='modif_profil'method='post' action='index.php?action=enrmodif' enctype='multipart/form-data'>
 				<fieldset>
 				<legend>Modifier</legend>
 				<form action='index.php?action=creacompte' method='POST' enctype='multipart/form-data'>
-				<p>Choisssez votre avatar</p>
+				<p>Choisssez votre avatar</p></br>
 				<input class='avatar_creation_compte' type='file' id='avatar' name='avatar'
 					   style='border: none;
 					opacity: 0.5;'><br/>
