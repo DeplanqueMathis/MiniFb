@@ -48,7 +48,7 @@ if (isset($_SESSION['info'])) {
             
             echo "<ul class='menu_responsive'><li class='accueil'> <a href='index.php'> Accueil</a></li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li></ul>";
-            echo "<div class='profil_responsive'><p> " . $_SESSION['login'] . "</p><img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'></div>";
+            echo "<div class='profil_responsive'><img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'></div>";
             
             echo "<div class='fond_avatar'>  <a href='index.php?action=modif'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'></a> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
             <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>

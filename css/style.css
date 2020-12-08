@@ -799,6 +799,7 @@ nav {
     }
     .profil_responsive img{
         height: 60px;
+        width: 60px;
         top: 60px;
         left: 10px;
     }
