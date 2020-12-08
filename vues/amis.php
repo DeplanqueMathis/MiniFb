@@ -11,7 +11,7 @@ else{
 	echo "<nav><div class='mes_amis'>";
     echo "<p>Ma liste d'amis :</p><br/>";
 	foreach($results as $line) {
-  		echo "<a href='index.php?id=" . $line["id"] . "'> " . $line['login'] . "<span>Cliquez pour voir son mur</span></a><br/>";
+  		echo "<a href='index.php?id=" . $line["id"] . "'> " . $line['login'] . "<span>Cliquez pour voir son mur</span></a><br/><br/>";
 	}
 	echo "</div></nav>";
 }?>

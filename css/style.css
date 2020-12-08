@@ -23,10 +23,13 @@ header{
    margin-bottom: 70px;
 }
 header img {
+
+
     position: absolute;
 	top: 0;
 	right: 0;
      height: 100px;
+
 }
 nav {
     display: flex; 
@@ -41,6 +44,7 @@ nav {
     list-style: none;
     font-size: 1.5rem;
     margin-left:160px;
+    margin-top: 100px;
 }
 
 .creation_compte_seco a {
@@ -99,9 +103,13 @@ nav {
     border: none;
     margin-left: 265px;
 }
-
+.valider_creation_compte:hover {
+    background-color: white;
+    color: black;
+}
 /*PAGE DE CONNEXION A SON COMPTE*/
 .creercompte {
+    margin-top: 100px;
     margin-left: 90px;
     text-align: right;
     color: white;
@@ -154,7 +162,10 @@ nav {
     margin-left: 265px;
 }
 
-
+.valider:hover {
+    background-color: white;
+    color: black;
+}
 
 /*PAGE DU MUR DE LA PERSONNE CONNECTE*/ 
 .deconnexion  a{
@@ -165,7 +176,7 @@ nav {
 .deconnexion{
     list-style: none;
     position: absolute;
-    bottom:100px;
+    bottom:20px;
     left: 20px; 
 }
 
@@ -180,7 +191,7 @@ nav {
 .accueil {
     list-style: none;
     position: absolute;
-    bottom:130px;
+    bottom:50px;
     left: 20px; 
 }
 .accueil a:hover{
@@ -320,6 +331,8 @@ nav {
 .menu_responsive {
     display: none;
 }
+
+
 /*FORMULAIRE DE MODIFICATION DU PROFIL*/
 
 .modif_profil legend{
@@ -372,6 +385,7 @@ nav {
 }
 .invitrecue {
     color: white;
+    margin-top: 100px;
 }
 .invitrecue a {
     color: white;
@@ -398,8 +412,10 @@ nav {
 }
 .pasinvitrecue_img  {
     height: 100px;
+    margin-top: 100px;
 }
 .pasinvitrecue {
+    margin-top: 100px;
     color: white;
     margin-left: 200px;
 }
@@ -407,6 +423,7 @@ nav {
 
 .invitation_envoye {
     color: white;
+    margin-top: 100px;
 }
 .invitation_envoye p {
     color: #be483a;
@@ -417,6 +434,7 @@ nav {
 }
 .pasinvitenvoye {
     color: white;
+    margin-top: 100px;
 }
 .vos_amis_responsive {
     display: none;
@@ -435,6 +453,7 @@ nav {
 }
 .pas_amis {
     color: white;
+    margin-top: 100px;
 }
 
 .amis_fleche {
@@ -450,12 +469,16 @@ nav {
 .amis_fleche:focus {
     transform: rotate(450deg);
 }
+.mes_amis {
+    margin-top: 100px;
+}
 
 .mes_amis a{
     color: white;
     text-decoration: none;
      position:relative;
     z-index:24;
+    
 }
 .mes_amis a:hover{
    color: lightskyblue;
@@ -477,7 +500,10 @@ nav {
 .mes_amis p {
     color: #be483a;
 }
-
+.pas_encore_ami {
+    color: white;
+    margin-top: 100px;
+}
 /*sur les amis*/
 .demander_ami {
     background-color: black;
@@ -487,6 +513,7 @@ nav {
     height: 40px;
     width: 150px;
     border-radius: 20px;
+    margin-top: 100px;
 }
 .demander_ami:hover{
     transition-duration: 0.5s;
@@ -506,6 +533,7 @@ nav {
     transition-duration: 0.5s;
     background-color: white;
     color: black;
+    margin-top: 100px;
 }
 
 .demande_accepter {
@@ -516,6 +544,7 @@ nav {
     height: 40px;
     width: 150px;
     border-radius: 20px;
+    margin-top: 100px;
 }
 .demande_accepter:hover{
     transition-duration: 0.5s;
@@ -531,6 +560,7 @@ nav {
     height: 40px;
     width: 150px;
     border-radius: 20px; 
+    margin-top: 100px;
 }
 .bouton_ami:hover{
      transition-duration: 0.5s;
@@ -541,13 +571,14 @@ nav {
 
 
 /*POSSIBILITE DE POSTER SUR SON MUR*/
+.mes_posts {
+    margin-top: 100px;
+}
 .mes_posts p{
     color: white;
     margin-bottom: 15px;
 }
-.mes_posts {
-    margin-left: 140px;
-}
+
 .champs_posts {
     margin-bottom: 15px;
     border: none;
@@ -576,7 +607,7 @@ nav {
 
 /*POSTS PUBLIER*/
 .all-post {
-    margin-left: 100px;
+    margin-left: -40px;
 }
 .post_publier { 
     margin: 20px;
@@ -638,16 +669,19 @@ nav {
     color: white;
 }
 .search_p {
+    margin-top: 100px;
     color: white;
    margin-right: 15px;
 }
 .search_avatar {
     border-radius: 40px;
     margin-right: 15px;
+    margin-top: 100px;
 }
 .search_nom {
     color: white;
     text-decoration: none;
+    margin-top: 100px;
 }
 .search_nom:hover{
     color: #ff5e54;
