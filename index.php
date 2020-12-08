@@ -66,11 +66,11 @@ if (isset($_SESSION['info'])) {
                 echo "<ul class='vos_amis_responsive' ><li ><a href='index.php?action=amis'>Vos amis  </a><br/></li>";
                 echo "<li class='invit'><a href='index.php?action=send'>Vos invitations envoyées</a> <br/></li>";
 				echo "<li class='invit_recues'><a href='index.php?action=recep'>Vos invitations reçues</a></li></ul> ";
+					if(!isset($_GET['action']) || $_GET['action']!="modif"){
 					if(!isset($_GET['action']) || $_GET['action']!="amis"){
 					if(!isset($_GET['action']) || $_GET['action']!="send"){
 						if(!isset($_GET['action']) || $_GET['action']!="recep"){
 							if(!isset($_GET['lien'])){
-								if(!isset($_GET['id'])){
 									echo "<div class='mes_posts'>";
 									if(isset($_GET['id'])){
 										echo "<form  action='index.php?action=ecrit&id=" . $_GET['id'] . "' method='post' enctype='multipart/form-data'>";
@@ -85,9 +85,9 @@ if (isset($_SESSION['info'])) {
 									<input class='img_publi' type='file' id='img_publi' name='img_publi'><br/>
 									<input class='valider_posts' type='submit' value='Publier'>
 									</form></div>";
-								}
 							}
 						}
+					}
 				}
 			}
             
