@@ -638,6 +638,10 @@ nav {
     color: white;
     border-radius: 20px;
 }
+.img_supprimer img {
+    height: 30px;
+    width: 30px;
+}
 
 /*pour trouver un ami*/
 
