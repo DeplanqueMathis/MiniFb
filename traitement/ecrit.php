@@ -12,7 +12,7 @@ if(isset($_POST['titre']) &&
 				  $chemin = "images/img_publi/" . $nomfichier;
 				  $resultat = move_uploaded_file($_FILES['img_publi']['tmp_name'],$chemin);
 				  if($resultat){
-					  	$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , ? , ? , ?)";
+					  	$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , ? , ? , ?,0)";
 						$q = $pdo->prepare($sql);
 						if(isset($_GET["id"])){
 							$id = $_GET['id'];
@@ -45,7 +45,7 @@ if(isset($_POST['titre']) &&
 		  }
 	  }
 	  	else{
-	  		$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , '' , ? , ?)";
+	  		$sql = "INSERT INTO ecrit VALUES (NULL , ? , ? , NOW() , '' , ? , ?,0)";
 			$q = $pdo->prepare($sql);
 			if(isset($_GET["id"]) || $_GET["id"]==$_SESSION["id"]){
 				$id = $_GET['id'];
