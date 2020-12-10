@@ -48,13 +48,27 @@ if (isset($_SESSION['info'])) {
             
             echo "<ul class='menu_responsive'><li class='accueil'> <a href='index.php'> Accueil</a></li>
             <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li></ul>";
-            echo "<div class='profil_responsive'><img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'></div>";
-            
-            echo "<div class='fond_avatar'>  <a href='index.php?action=modif'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'></a> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
-            <img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>
-            <li class='accueil'> <a href='index.php'> Accueil</a></li>
-            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>
-			<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
+            if(!isset($_GET['id'])){
+				echo "<div class='profil_responsive'><img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'></div>";
+            	echo "<div class='fond_avatar'>  <a href='index.php?action=modif'><img class='crayon_avatar' src='images/crayon.png' alt='crayon'></a> <img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $_SESSION['login'] . "<span> Heureux de vous retrouver !</span></p>
+            	<img class='img_avatar' src='images/avatars/"  . $_SESSION['avatar'] . "'>";
+			}
+			else{
+				$sql = "SELECT * FROM user WHERE id=?";
+    			$q = $pdo->prepare($sql);
+    			$q->execute(array($_GET['id']));
+				if($line=$q->fetch()){
+					echo "<div class='profil_responsive'><img class='img_avatar' src='images/avatars/"  . $line['avatar'] . "'></div>";
+            		echo "<div class='fond_avatar'>
+					<img class='profil_avatar' src='images/profil.png' alt='profil' ><p class='profil_nom'> " . $line['login'] . "</p>
+            		<img class='img_avatar' src='images/avatars/"  . $line['avatar'] . "'>";
+				}
+			}
+            echo "<li class='accueil'> <a href='index.php'> Accueil</a></li>
+            <li class='deconnexion'> <a href='index.php?action=deconnexion'>Déconnexion</a></li> </div>";
+			if(!isset($_GET['id'])){
+				echo "<li class='bonjour'>Bonjour " . $_SESSION['login'] . " !</li>";
+			}
 			if(!isset($_GET['action']) || $_GET['action']!="search"){
 				echo "<div id='mon_mur' >
                 <ul id='menu_amis'><li><p>Mes amis </p> <img class='amis_fleche' src='images/fleche.png' alt='fleche'> <a href='ouvrir' class='menu_ouvrir'><img  class='img_open' src='images/amis.png' alt='ouvrir'> </a>
