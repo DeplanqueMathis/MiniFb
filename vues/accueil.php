@@ -83,7 +83,7 @@
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
 		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé*/
 		echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a>";
-		echo "<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'>J'aime</a> (" . $line['aime'] . ")";
+		echo "<a class='mention_aime' href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'><img   src='images/aime.png' alt='mention_jaime'></a> (J'aime : " . $line['aime'] . ")";
 		echo "</div> </nav>";
     }
 	echo "</div>";
