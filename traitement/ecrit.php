@@ -22,7 +22,7 @@ if(isset($_POST['titre']) &&
 						}
 						$q->execute(array($_POST['titre'],$_POST['message'], $nomfichier ,$_SESSION['id'],$id));
 
-						if(!isset($_GET["id"])){
+						if(isset($_GET["id"])){
 							header("Location: index.php?id=" . $id);
 						}
 						else{
@@ -55,7 +55,7 @@ if(isset($_POST['titre']) &&
 			}
 			$q->execute(array($_POST['titre'],$_POST['message'],$_SESSION['id'],$id));
 
-			if(!isset($_GET["id"])){
+			if(isset($_GET["id"])){
 				header("Location: index.php?id=" . $id);
 			}
 			else{

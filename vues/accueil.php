@@ -62,12 +62,13 @@
    } else {
    // A completer
    // Requête de sélection des éléments dun mur
-    $sql = "SELECT ecrit.*,user.login FROM ecrit
-			INNER JOIN user ON user.id = ecrit.idAuteur
-			WHERE ecrit.idAmi=?
+    $sql = "SELECT ecrit.*,ami.login,auteur.login FROM ecrit
+			RIGHT JOIN user ami ON ecrit.idAmi = ami.id
+			RIGHT JOIN user auteur ON ecrit.idAuteur = auteur.id
+			WHERE ecrit.idAmi=? OR ecrit.idAuteur=?
 			ORDER BY ecrit.dateEcrit DESC";
     $q = $pdo->prepare($sql);
-    $q->execute(array($id));
+    $q->execute(array($id,$id));
 	echo "<div class='all-post'>";
     while($line=$q->fetch()) {
 		echo "<nav><div class='post_publier' > <b>";
@@ -81,8 +82,26 @@
 		echo $line['dateEcrit'] . "</p>";
 		if(!empty($line['image'])){
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
-		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé*/
-		echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a>";
+		}  
+		if($line['idAmi'] != $line['idAuteur']){
+			if($line['idAmi'] == $_SESSION['id']){
+				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a> à : <a href='index.php?id=" . $line['idAmi'] . "'>Vous</a> <br/>";
+			}
+			else if($line['idAuteur'] == $_SESSION['id']){
+				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>Vous</a> à : <a href='index.php?id=" . $line['idAmi'] . "'>" . $line['8'] . "</a> <br/>";
+			}
+			else{
+				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a> à : <a href='index.php?id=" . $line['idAmi'] . "'>" . $line['8'] . "</a> <br/>";
+			}
+		}
+		else{
+			if($line['idAuteur'] == $_SESSION['id']){
+				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>Vous</a><br/>";
+			}
+			else{
+				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a><br/>";
+			}
+		}
 		echo "<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'>J'aime</a> (" . $line['aime'] . ")";
 		echo "</div> </nav>";
     }
