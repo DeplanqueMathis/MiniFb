@@ -82,7 +82,6 @@
 		echo $line['dateEcrit'] . "</p>";
 		if(!empty($line['image'])){
 			echo "<img src='images/img_publi/" . $line['image'] . "'> ";
-<<<<<<< HEAD
 		}  
 		if($line['idAmi'] != $line['idAuteur']){
 			if($line['idAmi'] == $_SESSION['id']){
@@ -103,12 +102,7 @@
 				echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a><br/>";
 			}
 		}
-		echo "<a href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'>J'aime</a> (" . $line['aime'] . ")";
-=======
-		}  /*besoin d'une condition pour dire qu'il n'y pas dimage sinon ca fait image cassé*/
-		echo "Par : <a href='index.php?id=" . $line['idAuteur'] . "'>" . $line['login'] . "</a>";
 		echo "<a class='mention_aime' href='index.php?action=jaime&id=" . $_SESSION['id'] . "&post=" . $line['0'] . "'><img   src='images/aime.png' alt='mention_jaime'></a> (J'aime : " . $line['aime'] . ")";
->>>>>>> 252ed8e9362b1e6f9698b00a78e99aaab1c50e76
 		echo "</div> </nav>";
     }
 	echo "</div>";

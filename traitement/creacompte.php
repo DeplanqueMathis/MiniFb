@@ -5,6 +5,22 @@
     isset($_POST['passwd']) &&
      isset($_POST['repasswd']) &&
       $_POST['passwd'] == $_POST['repasswd']){
+	  $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+  		if (preg_match($regex, $_POST['mail'])){
+			$sql = "SELECT * FROM user WHERE login=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($_POST['login']));
+			if($line=$q->fetch()){
+				header("Location: index.php?action=creation&error=loginalready");
+			}
+	  		else{
+		  	$sql = "SELECT * FROM user WHERE mail=?";
+			$q = $pdo->prepare($sql);
+			$q->execute(array($_POST['mail']));
+			if($line=$q->fetch()){
+				header("Location: index.php?action=creation&error=mailalready");
+			}
+			else{
 	  if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){	  
 		  $tailleMax = 2097152;
 		  $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
@@ -42,6 +58,12 @@
 			$q->execute(array($_POST['login'], $_POST['passwd'], $_POST['mail']));
 			header("Location: index.php");
   		}
+	  }
+			}
+		}
+	  else{
+		  header("Location: index.php?action=creation&error=mail");
+	  }
   }
   
   else{

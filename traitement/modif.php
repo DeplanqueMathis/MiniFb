@@ -3,6 +3,8 @@ if(isset($_POST['login']) &&
    isset($_POST['mail'])){
 	if(!empty($_POST['passwd']) && !empty($_POST['repasswd'])
 	  && $_POST['passwd'] == $_POST['repasswd']){
+	  $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+  		if (preg_match($regex, $_POST['mail'])){
 	  if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){	  
 		  $tailleMax = 2097152;
 		  $extensionsValides = array('jpg', 'jpeg', 'gif', 'png');
@@ -51,6 +53,7 @@ if(isset($_POST['login']) &&
 					  $_SESSION['login'] = $_POST['login'];
 					  header("Location: index.php");
   		}
+		}
   }
   else{
 	  if(isset($_FILES['avatar']) && !empty($_FILES['avatar']['name'])){	  
