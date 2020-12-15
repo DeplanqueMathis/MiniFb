@@ -9,16 +9,19 @@
 <nav>
 <?php
 	if(isset($_GET['error'])){
-		if($_GET['error'] == 'mail'){
-			echo "<div><h1>L'adresse mail entrée est erronée</h1></div>";
+			if($_GET['error'] == 'mail'){
+				echo "<nav><div id='error'><h1>L'adresse mail entrée est erronée</h1><a href='index.php?action=creation' id='lienerror'><img src='images/croix.png' alt='Fermer'></a></div></nav>";
+			}
+			if($_GET['error'] == 'mailalready'){
+				echo "<nav><div id='error'><h1>Cette adresse mail est déjà utilisée</h1><a href='index.php?action=creation' id='lienerror'><img src='images/croix.png' alt='Fermer'></div></nav>";
+			}
+			if($_GET['error'] == 'loginalready'){
+				echo "<nav><div id='error'><h1>Ce login est déjà utilisée</h1><a href='index.php?action=creation' id='lienerror'><img src='images/croix.png' alt='Fermer'></div></nav>";
+			}
+			if($_GET['error'] == 'errone'){
+				echo "<nav><div id='error'><h1>Les informations données ne sont pas valides</h1><a href='index.php?action=creation' id='lienerror'><img src='images/croix.png' alt='Fermer'></div></nav>";
+			}
 		}
-		if($_GET['error'] == 'mailalready'){
-			echo "<div><h1>Cette adresse mail est déjà utilisée</h1></div>";
-		}
-		if($_GET['error'] == 'loginalready'){
-			echo "<div><h1>Ce login est déjà utilisée</h1></div>";
-		}
-	}
 ?>
 </nav>
     <div class="creation_compte">

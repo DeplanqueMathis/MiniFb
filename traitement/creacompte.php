@@ -1,9 +1,9 @@
 <?php
 
-  if(isset($_POST['login']) &&
-   isset($_POST['mail']) &&
-    isset($_POST['passwd']) &&
-     isset($_POST['repasswd']) &&
+  if(!empty($_POST['login']) &&
+   !empty($_POST['mail']) &&
+    !empty($_POST['passwd']) &&
+     !empty($_POST['repasswd']) &&
       $_POST['passwd'] == $_POST['repasswd']){
 	  $regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
   		if (preg_match($regex, $_POST['mail'])){
@@ -67,8 +67,7 @@
   }
   
   else{
-	echo("Problème isset");
-    //header("Location: index.php?action=creation");
+    header("Location: index.php?action=creation&error=errone");
   }
 
 ?>
